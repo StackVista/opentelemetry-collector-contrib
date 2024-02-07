@@ -58,6 +58,7 @@ import (
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/signalfxexporter"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/skywalkingexporter"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/splunkhecexporter"
+	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/stackstateexporter"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/sumologicexporter"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/syslogexporter"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/tencentcloudlogserviceexporter"
@@ -550,6 +551,15 @@ func TestDefaultExporters(t *testing.T) {
 				// disable queue to validate passing the test data synchronously
 				cfg.QueueSettings.Enabled = false
 				cfg.BackOffConfig.Enabled = false
+				return cfg
+			},
+			skipLifecycle: true,
+		},
+		{
+			exporter: "stackstate",
+			getConfigFn: func() component.Config {
+				cfg := expFactories["stackstate"].CreateDefaultConfig().(*stackstateexporter.Config)
+				cfg.Endpoint = "tcp://" + endpoint
 				return cfg
 			},
 			skipLifecycle: true,

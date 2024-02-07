@@ -52,6 +52,7 @@ require (
 	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/signalfxexporter v0.94.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/skywalkingexporter v0.94.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/splunkhecexporter v0.94.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/stackstateexporter v0.94.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/sumologicexporter v0.94.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/syslogexporter v0.94.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/tencentcloudlogserviceexporter v0.94.0
@@ -795,6 +796,8 @@ replace github.com/open-telemetry/opentelemetry-collector-contrib/exporter/mezmo
 replace github.com/open-telemetry/opentelemetry-collector-contrib/exporter/clickhouseexporter => ../../exporter/clickhouseexporter
 
 replace github.com/open-telemetry/opentelemetry-collector-contrib/exporter/cassandraexporter => ../../exporter/cassandraexporter
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/exporter/stackstateexporter => ../../exporter/stackstateexporter
 
 replace github.com/open-telemetry/opentelemetry-collector-contrib/receiver/udplogreceiver => ../../receiver/udplogreceiver
 
