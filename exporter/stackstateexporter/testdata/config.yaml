@@ -1,6 +1,6 @@
-clickhouse:
+stackstate:
   endpoint: clickhouse://127.0.0.1:9000
-clickhouse/full:
+stackstate/full:
   endpoint: clickhouse://127.0.0.1:9000
   username: foo
   password: bar
@@ -17,5 +17,5 @@ clickhouse/full:
   sending_queue:
     queue_size: 100
     storage: file_storage/clickhouse
-clickhouse/invalid-endpoint:
+stackstate/invalid-endpoint:
   endpoint: 127.0.0.1:9000

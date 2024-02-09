@@ -1,4 +1,4 @@
-type: clickhouse
+type: stackstate
 
 status:
   class: exporter
