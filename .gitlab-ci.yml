@@ -8,25 +8,25 @@ stages:
   image: 
     name: goreleaser/goreleaser:v1.24.0
     entrypoint: [""]
-  variables:
-    GOPATH: /go
   before_script:
+    - export GOPATH="$CI_PROJECT_DIR/.cache"
   cache:
     paths:
-      - /go/pkg/mod
+      - .cache
 
 prepare:
   stage: prepare
   extends: .go-base
   script:
-   - make -j2 gomoddownload
-   - make install-tools
+    - mkdir -p .cache
+    - make -j2 gomoddownload
+    - make install-tools
 
 build:
   stage: build
   extends: .go-base
   script:
-   - make otelcontribcol
+    - make otelcontribcol
   artifacts:
     paths:
       - bin/
@@ -37,18 +37,18 @@ test:
   stage: test
   extends: .go-base
   script:
-   - make -C exporter/stackstateexporter test
+    - make -C exporter/stackstateexporter test
 
 publish:
   stage: publish
   extends: .go-base
   script:
-   - make docker-otelcontribcol
-   - COMMIT_COUNT=$(git rev-list --count HEAD)
-   - DOCKER_TAG=dev-${CI_COMMIT_BRANCH}-${COMMIT_COUNT}-${CI_COMMIT_SHORT_SHA}
-   - docker tag otelcontribcol:latest ${DOCKER_REGISTRY}/stackstate/opentelemetry-collector-contrib:${DOCKER_TAG}
-   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin "$DOCKER_REGISTRY"
-   - docker push ${DOCKER_REGISTRY}/stackstate/opentelemetry-collector-contrib:${DOCKER_TAG}
+    - make docker-otelcontribcol
+    - COMMIT_COUNT=$(git rev-list --count HEAD)
+    - DOCKER_TAG=dev-${CI_COMMIT_BRANCH}-${COMMIT_COUNT}-${CI_COMMIT_SHORT_SHA}
+    - docker tag otelcontribcol:latest ${DOCKER_REGISTRY}/stackstate/opentelemetry-collector-contrib:${DOCKER_TAG}
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin "$DOCKER_REGISTRY"
+    - docker push ${DOCKER_REGISTRY}/stackstate/opentelemetry-collector-contrib:${DOCKER_TAG}
   services:
     - name: docker:19.03.12-dind
       command:
