@@ -824,6 +824,8 @@ replace github.com/open-telemetry/opentelemetry-collector-contrib/exporter/skywa
 
 replace github.com/open-telemetry/opentelemetry-collector-contrib/exporter/splunkhecexporter => ./exporter/splunkhecexporter
 
+replace github.com/open-telemetry/opentelemetry-collector-contrib/exporter/stackstateexporter => ./exporter/stackstateexporter
+
 replace github.com/open-telemetry/opentelemetry-collector-contrib/exporter/sumologicexporter => ./exporter/sumologicexporter
 
 replace github.com/open-telemetry/opentelemetry-collector-contrib/exporter/tencentcloudlogserviceexporter => ./exporter/tencentcloudlogserviceexporter
@@ -1150,5 +1152,3 @@ replace (
 )
 
 replace github.com/open-telemetry/opentelemetry-collector-contrib/internal/sqlquery => ./internal/sqlquery
-
-replace github.com/open-telemetry/opentelemetry-collector-contrib/exporter/stackstateexporter => ./exporter/stackstateexporter
