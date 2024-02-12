@@ -1,14 +1,27 @@
-image: golang:latest
+image: goreleaser/goreleaser:v1.21.2
 
 stages:
+ - prepare
  - build
+ - test
  - publish
 
-build:
-  stage: build
+.go-base:
+  cache:
+    paths:
+      - /go/pkg/mod
+
+prepare:
+  stage: prepare
+  extends: .go-base
   script:
    - make -j2 gomoddownload
    - make install-tools
+
+build:
+  stage: build
+  extends: .go-base
+  script:
    - make otelcontribcol
   artifacts:
     paths:
@@ -16,8 +29,15 @@ build:
     untracked: false
     expire_in: 30 days
 
+test:
+  stage: test
+  extends: .go-base
+  script:
+   - make -C exporter/stackstateexporter test
+
 publish:
   stage: publish
+  extends: .go-base
   script:
    - make docker-otelcontribcol
    - COMMIT_COUNT=$(git rev-list --count HEAD)
