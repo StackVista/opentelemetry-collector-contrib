@@ -1,0 +1,39 @@
+image: golang:latest
+
+stages:
+ - build
+ - publish
+
+build:
+  stage: build
+  script:
+   - make -j2 gomoddownload
+   - make install-tools
+   - make otelcontribcol
+  artifacts:
+    paths:
+      - bin/
+    untracked: false
+    expire_in: 30 days
+
+publish:
+  stage: publish
+  script:
+   - make docker-otelcontribcol
+   - COMMIT_COUNT=$(git rev-list --count HEAD)
+   - DOCKER_TAG=dev-${CI_COMMIT_BRANCH}-${COMMIT_COUNT}-${CI_COMMIT_SHORT_SHA}
+   - docker tag otelcontribcol:latest ${DOCKER_REGISTRY}/stackstate/opentelemetry-collector-contrib:${DOCKER_TAG}
+   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin "$DOCKER_REGISTRY"
+   - docker push ${DOCKER_REGISTRY}/stackstate/opentelemetry-collector-contrib:${DOCKER_TAG}
+  services:
+    - name: docker:19.03.12-dind
+      command:
+        - --experimental
+  variables:
+    DOCKER_DRIVER: overlay2
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+    DOCKER_REGISTRY: quay.io
+    DOCKER_USERNAME: $quay_user
+    DOCKER_PASSWORD: $quay_password
+
