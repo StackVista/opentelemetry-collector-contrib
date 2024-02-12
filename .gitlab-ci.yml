@@ -6,7 +6,7 @@ stages:
 
 .go-base:
   image: 
-    name: goreleaser/goreleaser:v1.21.2
+    name: goreleaser/goreleaser:v1.24.0
     entrypoint: [""]
   variables:
     GOPATH: /go
