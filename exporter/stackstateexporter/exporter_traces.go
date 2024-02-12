@@ -57,6 +57,20 @@ func (e *tracesExporter) shutdown(_ context.Context) error {
 	return nil
 }
 
+func getSpanParentType(r ptrace.Span) string {
+	if r.ParentSpanID().IsEmpty() {
+		return "Root"
+	}
+	switch r.Kind() {
+	case ptrace.SpanKindServer:
+		return "External"
+	case ptrace.SpanKindConsumer:
+		return "External"
+	default:
+		return "Internal"
+	}
+}
+
 func (e *tracesExporter) pushTraceData(ctx context.Context, td ptrace.Traces) error {
 	start := time.Now()
 	err := doWithTx(ctx, e.client, func(tx *sql.Tx) error {
@@ -85,6 +99,7 @@ func (e *tracesExporter) pushTraceData(ctx context.Context, td ptrace.Traces) er
 					status := r.Status()
 					eventTimes, eventNames, eventAttrs := convertEvents(r.Events())
 					linksTraceIDs, linksSpanIDs, linksTraceStates, linksAttrs := convertLinks(r.Links())
+					spanParentType := getSpanParentType(r)
 					_, err = statement.ExecContext(ctx,
 						r.StartTimestamp().AsTime(),
 						traceutil.TraceIDToHexOrEmptyString(r.TraceID()),
@@ -101,6 +116,7 @@ func (e *tracesExporter) pushTraceData(ctx context.Context, td ptrace.Traces) er
 						r.EndTimestamp().AsTime().Sub(r.StartTimestamp().AsTime()).Nanoseconds(),
 						traceutil.StatusCodeStr(status.Code()),
 						status.Message(),
+						spanParentType,
 						eventTimes,
 						eventNames,
 						eventAttrs,
@@ -174,6 +190,7 @@ CREATE TABLE IF NOT EXISTS %s (
      Duration Int64 CODEC(ZSTD(1)),
      StatusCode LowCardinality(String) CODEC(ZSTD(1)),
      StatusMessage String CODEC(ZSTD(1)),
+	 ParentParentType String CODEC(ZSTD(1)),
      Events Nested (
          Timestamp DateTime64(9),
          Name LowCardinality(String),
@@ -214,6 +231,7 @@ SETTINGS index_granularity=8192, ttl_only_drop_parts = 1;
                         Duration,
                         StatusCode,
                         StatusMessage,
+                        SpanParentType,
                         Events.Timestamp,
                         Events.Name,
                         Events.Attributes,
@@ -243,7 +261,8 @@ SETTINGS index_granularity=8192, ttl_only_drop_parts = 1;
                                   ?,
                                   ?,
                                   ?,
-                                  ?
+                                  ?,
+								  ?
                                   )`
 )
 

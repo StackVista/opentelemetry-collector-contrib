@@ -46,6 +46,21 @@ func TestExporter_pushTracesData(t *testing.T) {
 		exporter := newTestTracesExporter(t, defaultEndpoint)
 		mustPushTracesData(t, exporter, simpleTraces(1))
 	})
+	t.Run("check insert parentSpanType", func(t *testing.T) {
+		var parentTypes []string
+		initClickhouseTestServer(t, func(query string, values []driver.Value) error {
+			if strings.HasPrefix(query, "INSERT") {
+				if str, ok := values[15].(string); ok {
+					parentTypes = append(parentTypes, str)
+				}
+			}
+			return nil
+		})
+
+		exporter := newTestTracesExporter(t, defaultEndpoint)
+		mustPushTracesData(t, exporter, simpleTraces(2))
+		require.Equal(t, parentTypes, []string{"Root", "Internal"})
+	})
 }
 
 func newTestTracesExporter(t *testing.T, dsn string, fns ...func(*Config)) *tracesExporter {
@@ -69,11 +84,18 @@ func simpleTraces(count int) ptrace.Traces {
 	ss.SetSchemaUrl("https://opentelemetry.io/schemas/1.7.0")
 	ss.Scope().SetDroppedAttributesCount(20)
 	ss.Scope().Attributes().PutStr("lib", "clickhouse")
+	var firstSpan ptrace.Span
 	for i := 0; i < count; i++ {
 		s := ss.Spans().AppendEmpty()
+		s.SetSpanID([8]byte{byte(i + 1)})
 		s.SetStartTimestamp(pcommon.NewTimestampFromTime(time.Now()))
 		s.SetEndTimestamp(pcommon.NewTimestampFromTime(time.Now()))
 		s.Attributes().PutStr(conventions.AttributeServiceName, "v")
+		if i == 0 {
+			firstSpan = s
+		} else {
+			s.SetParentSpanID(firstSpan.SpanID())
+		}
 		event := s.Events().AppendEmpty()
 		event.SetName("event1")
 		event.SetTimestamp(pcommon.NewTimestampFromTime(time.Now()))
