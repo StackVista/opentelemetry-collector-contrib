@@ -190,7 +190,7 @@ CREATE TABLE IF NOT EXISTS %s (
      Duration Int64 CODEC(ZSTD(1)),
      StatusCode LowCardinality(String) CODEC(ZSTD(1)),
      StatusMessage String CODEC(ZSTD(1)),
-	 ParentParentType String CODEC(ZSTD(1)),
+	 SpanParentType String CODEC(ZSTD(1)),
      Events Nested (
          Timestamp DateTime64(9),
          Name LowCardinality(String),
