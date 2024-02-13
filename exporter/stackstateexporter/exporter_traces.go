@@ -59,15 +59,15 @@ func (e *tracesExporter) shutdown(_ context.Context) error {
 
 func getSpanParentType(r ptrace.Span) string {
 	if r.ParentSpanID().IsEmpty() {
-		return "Root"
+		return "SPAN_PARENT_TYPE_ROOT"
 	}
 	switch r.Kind() {
 	case ptrace.SpanKindServer:
-		return "External"
+		return "SPAN_PARENT_TYPE_EXTERNAL"
 	case ptrace.SpanKindConsumer:
-		return "External"
+		return "SPAN_PARENT_TYPE_EXTERNAL"
 	default:
-		return "Internal"
+		return "SPAN_PARENT_TYPE_INTERNAL"
 	}
 }
 

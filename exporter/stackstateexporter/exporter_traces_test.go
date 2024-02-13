@@ -59,7 +59,7 @@ func TestExporter_pushTracesData(t *testing.T) {
 
 		exporter := newTestTracesExporter(t, defaultEndpoint)
 		mustPushTracesData(t, exporter, simpleTraces(2))
-		require.Equal(t, parentTypes, []string{"Root", "Internal"})
+		require.Equal(t, parentTypes, []string{"SPAN_PARENT_TYPE_ROOT", "SPAN_PARENT_TYPE_INTERNAL"})
 	})
 }
 
