@@ -9,6 +9,10 @@ If you are looking for developer-facing changes, check out [CHANGELOG-API.md](./
 
 ## v0.133.0
 
+<!-- previous-version -->
+
+## v0.133.0
+
 ### 🛑 Breaking changes 🛑
 
 - `coralogixexporter`: Remove unused deprecated configgrpc.ClientConfig (#40853)

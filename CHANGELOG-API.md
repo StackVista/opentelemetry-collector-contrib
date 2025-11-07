@@ -9,6 +9,10 @@ If you are looking for user-facing changes, check out [CHANGELOG.md](./CHANGELOG
 
 ## v0.133.0
 
+<!-- previous-version -->
+
+## v0.133.0
+
 ### 🛑 Breaking changes 🛑
 
 - `signaltometricsconnector`: Use configoptional for optional metric fields (#41922)
