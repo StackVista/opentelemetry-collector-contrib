@@ -3,15 +3,15 @@ module github.com/open-telemetry/opentelemetry-collector-contrib/receiver/sqlser
 go 1.24
 
 require (
-	github.com/DataDog/datadog-agent/pkg/obfuscate v0.69.2
+	github.com/DataDog/datadog-agent/pkg/obfuscate v0.71.2
 	github.com/google/go-cmp v0.7.0
 	github.com/hashicorp/golang-lru/v2 v2.0.7
 	github.com/microsoft/go-mssqldb v1.9.2
-	github.com/open-telemetry/opentelemetry-collector-contrib/internal/common v0.133.0
-	github.com/open-telemetry/opentelemetry-collector-contrib/internal/sqlquery v0.133.0
-	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/golden v0.133.0
-	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/pdatatest v0.133.0
-	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/winperfcounters v0.133.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/internal/common v0.133.1
+	github.com/open-telemetry/opentelemetry-collector-contrib/internal/sqlquery v0.133.1
+	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/golden v0.133.1
+	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/pdatatest v0.133.1
+	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/winperfcounters v0.133.1
 	github.com/stretchr/testify v1.10.0
 	github.com/testcontainers/testcontainers-go v0.38.0
 	go.opentelemetry.io/collector/component v1.39.0
@@ -39,9 +39,9 @@ require (
 require (
 	dario.cat/mergo v1.0.1 // indirect
 	github.com/Azure/go-ansiterm v0.0.0-20210617225240-d185dfc1b5a1 // indirect
-	github.com/DataDog/datadog-agent/pkg/util/log v0.69.2 // indirect
-	github.com/DataDog/datadog-agent/pkg/util/scrubber v0.69.2 // indirect
-	github.com/DataDog/datadog-agent/pkg/version v0.69.2 // indirect
+	github.com/DataDog/datadog-agent/pkg/util/log v0.71.2 // indirect
+	github.com/DataDog/datadog-agent/pkg/util/scrubber v0.71.2 // indirect
+	github.com/DataDog/datadog-agent/pkg/version v0.71.2 // indirect
 	github.com/DataDog/datadog-go/v5 v5.6.0 // indirect
 	github.com/DataDog/go-sqllexer v0.1.6 // indirect
 	github.com/Microsoft/go-winio v0.6.2 // indirect
@@ -97,7 +97,7 @@ require (
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.3-0.20250322232337-35a7c28c31ee // indirect
 	github.com/morikuni/aec v1.0.0 // indirect
-	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/pdatautil v0.133.0 // indirect
+	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/pdatautil v0.133.1 // indirect
 	github.com/opencontainers/go-digest v1.0.0 // indirect
 	github.com/opencontainers/image-spec v1.1.1 // indirect
 	github.com/outcaste-io/ristretto v0.2.3 // indirect

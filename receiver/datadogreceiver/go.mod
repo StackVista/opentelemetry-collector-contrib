@@ -4,17 +4,17 @@ go 1.24
 
 require (
 	github.com/DataDog/agent-payload/v5 v5.0.163
-	github.com/DataDog/datadog-agent/pkg/obfuscate v0.69.2
-	github.com/DataDog/datadog-agent/pkg/proto v0.69.2
+	github.com/DataDog/datadog-agent/pkg/obfuscate v0.71.2
+	github.com/DataDog/datadog-agent/pkg/proto v0.71.2
 	github.com/DataDog/datadog-agent/pkg/trace v0.71.0-devel.0.20250820164444-fcef12608466
 	github.com/DataDog/datadog-api-client-go/v2 v2.44.0
 	github.com/DataDog/sketches-go v1.4.7
 	github.com/hashicorp/golang-lru/v2 v2.0.7
-	github.com/open-telemetry/opentelemetry-collector-contrib/internal/coreinternal v0.133.0
-	github.com/open-telemetry/opentelemetry-collector-contrib/internal/datadog v0.133.0
-	github.com/open-telemetry/opentelemetry-collector-contrib/internal/exp/metrics v0.133.0
-	github.com/open-telemetry/opentelemetry-collector-contrib/internal/sharedcomponent v0.133.0
-	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/datadog v0.133.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/internal/coreinternal v0.133.1
+	github.com/open-telemetry/opentelemetry-collector-contrib/internal/datadog v0.133.1
+	github.com/open-telemetry/opentelemetry-collector-contrib/internal/exp/metrics v0.133.1
+	github.com/open-telemetry/opentelemetry-collector-contrib/internal/sharedcomponent v0.133.1
+	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/datadog v0.133.1
 	github.com/stretchr/testify v1.10.0
 	github.com/tinylib/msgp v1.3.0
 	github.com/vmihailenco/msgpack/v5 v5.4.1
@@ -39,12 +39,12 @@ require (
 )
 
 require (
-	github.com/DataDog/datadog-agent/comp/core/tagger/origindetection v0.69.2 // indirect
+	github.com/DataDog/datadog-agent/comp/core/tagger/origindetection v0.71.2 // indirect
 	github.com/DataDog/datadog-agent/pkg/remoteconfig/state v0.67.0 // indirect
-	github.com/DataDog/datadog-agent/pkg/util/hostname/validate v0.69.2 // indirect
-	github.com/DataDog/datadog-agent/pkg/util/log v0.69.2 // indirect
-	github.com/DataDog/datadog-agent/pkg/util/scrubber v0.69.2 // indirect
-	github.com/DataDog/datadog-agent/pkg/version v0.69.2 // indirect
+	github.com/DataDog/datadog-agent/pkg/util/hostname/validate v0.71.2 // indirect
+	github.com/DataDog/datadog-agent/pkg/util/log v0.71.2 // indirect
+	github.com/DataDog/datadog-agent/pkg/util/scrubber v0.71.2 // indirect
+	github.com/DataDog/datadog-agent/pkg/version v0.71.2 // indirect
 	github.com/DataDog/datadog-go/v5 v5.6.0 // indirect
 	github.com/DataDog/go-sqllexer v0.1.6 // indirect
 	github.com/DataDog/go-tuf v1.1.0-0.5.2 // indirect
@@ -86,7 +86,7 @@ require (
 	github.com/mitchellh/reflectwalk v1.0.2 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.3-0.20250322232337-35a7c28c31ee // indirect
-	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/pdatautil v0.133.0 // indirect
+	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/pdatautil v0.133.1 // indirect
 	github.com/outcaste-io/ristretto v0.2.3 // indirect
 	github.com/patrickmn/go-cache v2.1.0+incompatible // indirect
 	github.com/philhofer/fwd v1.1.3-0.20240916144458-20a13a1f6b7c // indirect

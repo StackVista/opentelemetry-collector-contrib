@@ -6,11 +6,11 @@ package metrics // import "github.com/open-telemetry/opentelemetry-collector-con
 import (
 	"context"
 
+	"github.com/DataDog/datadog-agent/pkg/opentelemetry-mapping-go/otlp/attributes"
+	"github.com/DataDog/datadog-agent/pkg/opentelemetry-mapping-go/otlp/metrics"
+	"github.com/DataDog/datadog-agent/pkg/util/quantile"
 	"github.com/DataDog/datadog-api-client-go/v2/api/datadog"
 	"github.com/DataDog/datadog-api-client-go/v2/api/datadogV2"
-	"github.com/DataDog/opentelemetry-mapping-go/pkg/otlp/attributes"
-	"github.com/DataDog/opentelemetry-mapping-go/pkg/otlp/metrics"
-	"github.com/DataDog/opentelemetry-mapping-go/pkg/quantile"
 	"go.opentelemetry.io/collector/component"
 
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/datadogexporter/internal/metrics/sketches"
@@ -106,6 +106,7 @@ func (c *Consumer) ConsumeTimeSeries(
 	dims *metrics.Dimensions,
 	typ metrics.DataType,
 	timestamp uint64,
+	ts int64,
 	value float64,
 ) {
 	dt := c.toDataType(typ)
@@ -124,6 +125,7 @@ func (c *Consumer) ConsumeSketch(
 	_ context.Context,
 	dims *metrics.Dimensions,
 	timestamp uint64,
+	ts int64,
 	sketch *quantile.Sketch,
 ) {
 	c.sl = append(c.sl, sketches.SketchSeries{
@@ -132,7 +134,7 @@ func (c *Consumer) ConsumeSketch(
 		Host:     dims.Host(),
 		Interval: 1,
 		Points: []sketches.SketchPoint{{
-			Ts:     int64(timestamp / 1e9),
+			Ts:     ts,
 			Sketch: sketch,
 		}},
 	})
