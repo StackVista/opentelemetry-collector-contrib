@@ -647,7 +647,7 @@ multimod-prerelease: $(MULTIMOD)
 
 .PHONY: multimod-sync
 multimod-sync: $(MULTIMOD)
-	$(MULTIMOD) sync -a=true -s=true -o ../opentelemetry-collector
+	$(MULTIMOD) sync -a=true -s=true -o .
 	$(MAKE) gotidy
 
 .PHONY: crosslink
