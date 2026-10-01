@@ -270,7 +270,7 @@ endif
 .PHONY: generate
 generate: generate-tools
 ifeq ($(CURDIR),$(SRC_ROOT))
-	PATH="$(TOOLS_BIN_DIR_PORTABLE):$$PATH" $(MAKE) for-all CMD="$(GOCMD) generate ./..."
+	PATH="$(TOOLS_BIN_DIR_PORTABLE):$$PATH" $(MAKE) for-all-generate
 	$(MAKE) gofmt
 else
 	PATH="$(TOOLS_BIN_DIR_PORTABLE):$$PATH" $(GOCMD) generate ./...

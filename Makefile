@@ -229,6 +229,15 @@ for-all:
 	done
 
 .PHONY: for-generated
+.PHONY: for-all-generate
+for-all-generate:
+	@set -e; for dir in $$ALL_MODS; do \
+	  case "$${dir}" in \
+	    ./third_party/*|third_party/*) $(MAKE) --no-print-directory -C "$${dir}" generate ;; \
+	    *) (cd "$${dir}" && echo "running $(GOCMD) generate ./... in $${dir}" && $(GOCMD) generate ./...) ;; \
+	  esac; \
+	done
+
 for-generated:
 	@set -e; for dir in $(GENERATED_MODS); do \
 	  (cd "$${dir}" && \

@@ -65,3 +65,22 @@ Swag facade0.25.1 and five patched utilities0.27.1, with the required Go1.25
 minimum; its earlier isolated graph still selected Swag0.23 archived YAML.
 Every affected independent consumer records the necessary minimum. Both full
 native tidy passes passed; final fixed-point/binary checks follow this checkpoint.
+
+All seventeen independent root/owner/distribution targets passed tidy byte fixed
+points and module verification at d2ae724. Guard deletion controls, rulefmt and
+both Prometheus remote-write consumer suites passed. Three clean d2ae binaries
+passed module/symbol checks; real Contrib/testbed OTLP UserAgent fixtures passed.
+
+Fresh native CI exposed two additional owner integration defects: coverage IDs
+exceeded the existing45-character limit for long logical DataDog identities, and
+root go-generate bypassed nested owner recipes, executing preserved upstream
+Prometheus tool-download generators. Foreign coverage IDs now use repository
+paths; all first-party coverage mappings are unchanged and all eleven owners are
+included. Root generation routes only owned third-party modules through their
+required guarded native recipes; first-party go-generate and formatting remain.
+
+Broader upstream engineering/test graphs retain three external legacy importers:
+Aerospike's Gomega matchers, DataDog comp/core/secrets/mock, and Scaleway's
+internal/testhelpers/httprecorder via dnaeon/go-vcr/cassette. None is selected by
+the actual six production/test consuming roots or linked in the three binaries.
+These residuals do not establish complete estate/test-tool migration.

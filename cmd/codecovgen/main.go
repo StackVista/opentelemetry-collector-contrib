@@ -183,7 +183,11 @@ func walkTree(cli Args) (*codecovConfig, error) {
 			return err
 		}
 
-		componentID, err := generateComponentID(moduleName, cli)
+		idName := moduleName
+		if moduleName != cli.BasePrefix && !strings.HasPrefix(moduleName, cli.BasePrefix+"/") {
+			idName = filepath.ToSlash(relativePath)
+		}
+		componentID, err := generateComponentID(idName, cli)
 		if err != nil {
 			return err
 		}
