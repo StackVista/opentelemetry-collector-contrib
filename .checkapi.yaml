@@ -1,4 +1,17 @@
 ignored_paths:
+  # Complete upstream owner modules retain their original non-Collector APIs.
+  # Their native attribution, lint and upstream/caller tests remain required.
+  - third_party/aerospike-client-go
+  - third_party/athenz
+  - third_party/datadog-logs-config
+  - third_party/datadog-nodetreemodel
+  - third_party/datadog-scrubber
+  - third_party/datadog-setup
+  - third_party/datadog-viper
+  - third_party/otel-schema
+  - third_party/prometheus
+  - third_party/scaleway-sdk-go
+  - third_party/uap-go
   - cmd/codecovgen
   - cmd/telemetrygen
   - cmd/opampsupervisor
