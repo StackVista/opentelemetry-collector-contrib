@@ -113,6 +113,28 @@ func TestInvalidYAML(t *testing.T) {
 	require.NoError(t, fp.Shutdown(t.Context()))
 }
 
+func TestYAMLValues(t *testing.T) {
+	fp := newTestProvider("./testdata/yaml-values.yaml")
+	retrieved, err := fp.Retrieve(t.Context(), "s3://bucket.s3.region.amazonaws.com/key", nil)
+	require.NoError(t, err)
+	conf, err := retrieved.AsConf()
+	require.NoError(t, err)
+	values := map[string]any{
+		"enabled": true,
+		"legacy":  "yes",
+		"count":   42,
+		"ratio":   1.5,
+		"empty":   nil,
+		"message": "first line\nsecond line\n",
+	}
+	assert.Equal(t, map[string]any{
+		"defaults": values,
+		"alias":    values,
+		"merged":   values,
+	}, conf.ToStringMap())
+	require.NoError(t, fp.Shutdown(t.Context()))
+}
+
 func TestScheme(t *testing.T) {
 	fp := newTestProvider("./testdata/otel-config.yaml")
 	assert.Equal(t, "s3", fp.Scheme())

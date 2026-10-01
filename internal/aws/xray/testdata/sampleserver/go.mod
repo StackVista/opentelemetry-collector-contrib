@@ -8,7 +8,7 @@ require (
 	github.com/andybalholm/brotli v1.1.0 // indirect
 	github.com/klauspost/compress v1.17.6 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
-	github.com/stretchr/testify v1.11.1 // indirect
+	github.com/stretchr/testify v1.12.1 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasthttp v1.52.0 // indirect
 	go.opentelemetry.io/otel v1.38.0 // indirect

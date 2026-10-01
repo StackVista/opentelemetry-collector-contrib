@@ -1,0 +1,12 @@
+defaults: &defaults
+  enabled: true
+  legacy: yes
+  count: 42
+  ratio: 1.5
+  empty: null
+  message: |
+    first line
+    second line
+alias: *defaults
+merged:
+  <<: *defaults

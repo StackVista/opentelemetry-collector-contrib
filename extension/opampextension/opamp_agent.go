@@ -32,10 +32,10 @@ import (
 	"go.opentelemetry.io/collector/service/hostcapabilities"
 	semconv "go.opentelemetry.io/otel/semconv/v1.27.0"
 	"go.uber.org/zap"
+	"go.yaml.in/yaml/v3"
 	expmaps "golang.org/x/exp/maps"
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
-	"gopkg.in/yaml.v3"
 
 	"github.com/open-telemetry/opentelemetry-collector-contrib/extension/opampcustommessages"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/pkg/status"
