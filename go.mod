@@ -20,3 +20,5 @@ retract (
 replace github.com/ua-parser/uap-go => ./third_party/uap-go
 
 replace github.com/wk8/go-ordered-map/v2 => github.com/StackVista/stackstate-agent/third_party/go-ordered-map/v2 v2.0.0-20261001130553-d6ac30666e85
+
+replace github.com/scaleway/scaleway-sdk-go => ./third_party/scaleway-sdk-go

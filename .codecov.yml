@@ -1004,6 +1004,10 @@ component_management:
     name: testbed_mockdatasenders_mockdatadogagent
     paths:
     - testbed/mockdatasenders/mockdatadogagentexporter/**
+  - component_id: github.com_scaleway_scaleway-sdk-go
+    name: github.com_scaleway_scaleway-sdk-go
+    paths:
+    - third_party/scaleway-sdk-go/**
   - component_id: github.com_ua-parser_uap-go
     name: github.com_ua-parser_uap-go
     paths:

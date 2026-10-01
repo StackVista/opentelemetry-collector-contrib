@@ -591,3 +591,5 @@ replace github.com/open-telemetry/opentelemetry-collector-contrib/pkg/xk8stest =
 replace github.com/open-telemetry/opentelemetry-collector-contrib/internal/coreinternal => ../../coreinternal
 
 replace github.com/ua-parser/uap-go => ../../../third_party/uap-go
+
+replace github.com/scaleway/scaleway-sdk-go => ../../../third_party/scaleway-sdk-go
