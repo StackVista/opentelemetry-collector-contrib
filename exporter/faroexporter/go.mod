@@ -92,7 +92,6 @@ require (
 	golang.org/x/text v0.28.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20250804133106-a7a43d27e69b // indirect
 	google.golang.org/protobuf v1.36.10 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
 replace go.opentelemetry.io/collector/extension/auth v0.121.1-0.20250317165851-432d92d8b366 => go.opentelemetry.io/collector/extension/extensionauth v1.44.1-0.20251030084003-6f29b34c24f6
@@ -104,3 +103,5 @@ replace github.com/open-telemetry/opentelemetry-collector-contrib/pkg/golden => 
 replace github.com/open-telemetry/opentelemetry-collector-contrib/pkg/translator/faro => ../../pkg/translator/faro
 
 replace github.com/open-telemetry/opentelemetry-collector-contrib/pkg/pdatautil => ../../pkg/pdatautil
+
+replace github.com/wk8/go-ordered-map/v2 => github.com/StackVista/stackstate-agent/third_party/go-ordered-map/v2 v2.0.0-20261001130553-d6ac30666e85
