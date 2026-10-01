@@ -1,0 +1,12 @@
+{
+  "Maintained": {
+    "config/dynconfig.go": "678f529d7a7f75970e833681f0238cdca9b3c83e1d7fd6af0272bb92375fc0f8",
+    "config/provider/yaml_config_provider.go": "47b32d56392581c87c3cdc06b9dc14a241954666eaf8a2fa9d1614fec5f42d87",
+    "dynconfig_serialze_test.go": "50eae60b3efc08368d9b4c8b414f0521d308197f73d77c08bcbaa873b4ea8723",
+    "go.mod": "4fbd51ba63efe487b5c1b2b2c86e7629f08706b97fa94b7ce7c5f6126d1a1293",
+    "go.sum": "c50934887e01d0c7138b6f5b0adbf51da4ce7e23dad87ec7b131c50f5dded8e4"
+  },
+  "Manifests": {
+    "UPSTREAM-SHA256SUMS": "2e56202dfba30ac0aa29bbf7b36192e5c7ae22e018a0929579283966be0c6c36"
+  }
+}
