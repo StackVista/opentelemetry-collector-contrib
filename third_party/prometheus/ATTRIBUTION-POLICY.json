@@ -1,0 +1,11 @@
+{
+  "Maintained": {
+    "go.mod": "7f0bea3906c3f4720476ed0d4992f11eb2b0bfa7d1fb876869cd9b7829b38976",
+    "go.sum": "b7f3cc5a2c720907482b9f54085c6bccc070dad3a33c2498c3fbfbf2aac944c4",
+    "model/rulefmt/rulefmt.go": "53633716730aa392ecf002abcd9964ae943076b7f37a8930f49e39b163bd20f8",
+    "model/rulefmt/rulefmt_test.go": "b360e9b726b7b697f2cb8e9746791dcac849834390fb93298ea37c013a6dbbdf"
+  },
+  "Manifests": {
+    "UPSTREAM-SHA256SUMS": "808e5b72d9413051200c2cb4e97c725973c5490e7121e30ba62d55106225d089"
+  }
+}
