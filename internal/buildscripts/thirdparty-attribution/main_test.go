@@ -73,3 +73,43 @@ func TestOriginalAndOwnedBoundaries(t *testing.T) {
 		})
 	}
 }
+
+func TestMissingOriginalPatterns(t *testing.T) {
+	for _, name := range []string{
+		"tools/benchmark/benchmark.go",
+		".gitpod.yml",
+		"syncers/auth_history_syncer/src/test/resources/impl/access.2022_06_09.log",
+		"ui/keys/dev_x509_cert.cnf",
+		"kubernetes/charts/athenz-zts/files/conf/athenz_conf.json",
+		"original assets/file with spaces.txt",
+	} {
+		t.Run(name, func(t *testing.T) {
+			root := t.TempDir()
+			path := filepath.Join(root, name)
+			if err := os.MkdirAll(filepath.Dir(path), 0o755); err != nil {
+				t.Fatal(err)
+			}
+			content := []byte("original public asset")
+			if err := os.WriteFile(path, content, 0o644); err != nil {
+				t.Fatal(err)
+			}
+			manifest := []byte(fmt.Sprintf("%x  %s\n", sha256.Sum256(content), name))
+			if err := os.WriteFile(filepath.Join(root, "UPSTREAM-SHA256SUMS"), manifest, 0o644); err != nil {
+				t.Fatal(err)
+			}
+			if err := os.WriteFile(filepath.Join(root, "OWNED-FILES"), []byte("OWNED-FILES\nUPSTREAM-SHA256SUMS\n"), 0o644); err != nil {
+				t.Fatal(err)
+			}
+			p := policy{Manifests: map[string]string{"UPSTREAM-SHA256SUMS": digest(manifest)}}
+			if _, err := verify(root, p); err != nil {
+				t.Fatalf("complete original inventory rejected: %v", err)
+			}
+			if err := os.Remove(path); err != nil {
+				t.Fatal(err)
+			}
+			if _, err := verify(root, p); err == nil || !strings.Contains(err.Error(), "missing inventory files: "+name) {
+				t.Fatalf("deleted ignored-pattern asset accepted: %v", err)
+			}
+		})
+	}
+}
