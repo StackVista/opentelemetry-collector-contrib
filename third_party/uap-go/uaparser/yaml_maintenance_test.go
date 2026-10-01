@@ -32,7 +32,7 @@ device_parsers:
 		t.Fatalf("scalar/regex contract: %#v %#v %#v", c.UserAgent, c.Os, c.Device)
 	}
 	path := filepath.Join(t.TempDir(), "regexes.yaml")
-	if err := ioutil.WriteFile(path, data, 0600); err != nil {
+	if err := ioutil.WriteFile(path, data, 0o600); err != nil {
 		t.Fatal(err)
 	}
 	fileParser, err := New(path)

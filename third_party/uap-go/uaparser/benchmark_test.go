@@ -5,8 +5,10 @@ import (
 	"testing"
 )
 
-var benchedParser *Parser
-var benchedParserWithOptions *Parser
+var (
+	benchedParser            *Parser
+	benchedParserWithOptions *Parser
+)
 
 func init() {
 	var err error
