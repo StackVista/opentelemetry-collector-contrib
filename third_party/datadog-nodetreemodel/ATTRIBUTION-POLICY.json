@@ -2,7 +2,7 @@
   "Maintained": {
     "compatibility_test.go": "0723a12d542453b083b48de1350dbd60b6fb026fac52b9f587a2c17e0199059d",
     "go.mod": "868a92284b0ddaff17bfe62b757401afed9d03ced7ea30c61fccaa87f1ec11b6",
-    "go.sum": "0e19a71645672a9c2945836731a1208095b46526c3f0a5a5049c2e51fbec59fa",
+    "go.sum": "1c2a2e530c7f8694bd7b5b9d2c4ec19dcda25d6c6a47025380d37b1a5885c33e",
     "read_config_file.go": "5e4676d717d6a900c900b2b3a4f2c89eeb11b236e562dc3f579a72a42c39aee0"
   },
   "Manifests": {
