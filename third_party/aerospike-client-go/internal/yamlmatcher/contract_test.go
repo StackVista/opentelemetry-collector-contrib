@@ -4,9 +4,10 @@
 package yamlmatcher
 
 import (
-	"github.com/onsi/gomega/matchers"
 	"strings"
 	"testing"
+
+	"github.com/onsi/gomega/matchers"
 )
 
 func TestMatcherContract(t *testing.T) {

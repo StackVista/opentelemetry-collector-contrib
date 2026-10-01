@@ -45,9 +45,9 @@ released/deployed product completion. Remove temporary backports after compatibl
 maintained owning releases pass original and actual consumer/distribution checks.
 
 Executed standalone engineering residuals now have explicit maintained owners:
-Aerospike selects published Gomega v1.39.0 (the inspected v1.38.0 still imports
-archived v3); required Ginkgo/support metadata follows that release, retaining
-Go 1.23. Scaleway's cassette helper selects the complete original go-vcr v1.2.0
+Aerospike selects published Gomega v1.38.2 (v1.38.0 still imports archived v3;
+v1.38.1 raises Go to 1.24); required Ginkgo/support metadata follows that release, retaining
+Go 1.23. VCR also explicitly selects maintained v3.0.5 for its matcher tests. Scaleway's cassette helper selects the complete original go-vcr v1.2.0
 with matching maintained v2. DataDog setup selects the complete four-file
 secrets/mock cd89 distribution with matching maintained v2 and the same-generation
 secrets definition. Latest DataDog v0.84 raises Go to 1.26 and changes generation;

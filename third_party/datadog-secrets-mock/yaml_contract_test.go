@@ -12,7 +12,7 @@ func TestYAMLSerializationContract(t *testing.T) {
 	m := New(t)
 	m.SetSecrets(map[string]string{"handle": "0123"})
 	calls := 0
-	m.SubscribeToChanges(func(_ string, _ string, _ []string, _ any, _ any) { calls++ })
+	m.SubscribeToChanges(func(_, _ string, _ []string, _, _ any) { calls++ })
 	b, e := m.Resolve([]byte("password: ENC[handle]\nflag: yes\nquoted: '01'\n"), "fixture", "", "")
 	if e != nil || !strings.Contains(string(b), `password: "0123"`) || !strings.Contains(string(b), "flag: true") || !strings.Contains(string(b), `quoted: "01"`) || calls != 1 {
 		t.Fatalf("%s %v calls=%d", b, e, calls)

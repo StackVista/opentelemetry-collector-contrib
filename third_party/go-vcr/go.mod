@@ -9,5 +9,6 @@ require (
 
 require (
 	github.com/onsi/ginkgo v1.16.5 // indirect
-	github.com/onsi/gomega v1.39.0 // indirect
+	github.com/onsi/gomega v1.38.2 // indirect
+	go.yaml.in/yaml/v3 v3.0.5 // indirect
 )

@@ -1,8 +1,8 @@
 {
   "Maintained": {
     "cassette/cassette.go": "c6f4eb22d4da3fd77cbbde83e50af537f31577153fda4d2574f3502a985a9251",
-    "go.mod": "22d45e3cd4d6f29631bcce36b246c9def2a5e2ae5df7b51527eb6d96f7fef6b9",
-    "go.sum": "0a5a61a1013c18bce077c83773f96b9a8cf559b5c6ee3d997e57b424e18c25bd"
+    "go.mod": "d090652bf3481f89fffc2a4bb1194a57e4aae3a37fffb84d6684c8801b4397c6",
+    "go.sum": "77e23be91b2f0c5b6a8bd14ff0414b5be72f1dbd12c026c86b6aba6dae8db3f9"
   },
   "Manifests": {
     "UPSTREAM-SHA256SUMS": "c408ad36d359b597c84d2ce6c606eabe76d7d35c4d8e3f7bea14f7835a0315b0"

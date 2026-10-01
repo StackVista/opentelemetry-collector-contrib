@@ -4,12 +4,13 @@
 package cassette_test
 
 import (
-	"github.com/dnaeon/go-vcr/cassette"
 	"net/http"
 	"os"
 	"path/filepath"
 	"strings"
 	"testing"
+
+	"github.com/dnaeon/go-vcr/cassette"
 )
 
 func TestYAMLCassetteContract(t *testing.T) {
