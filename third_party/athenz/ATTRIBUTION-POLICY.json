@@ -1,7 +1,7 @@
 {
   "Maintained": {
-    "go.mod": "85a41680b0fcf3af286a2b33c150a1b632eb95626e244861f9d2a62756b02e1c",
-    "go.sum": "2974da363aa7b1a82bd14737d8ab792d149217f5c62e6bbf44ee0159e3a547b9",
+    "go.mod": "a9b5a438bbf8f92587440eda405181d15d09a73a552a70eb67e93445ba32017b",
+    "go.sum": "7f435e511706ad76382953a92bac6c72ade0867f8a00a3ef46cc42904df10744",
     "libs/go/athenzutils/config.go": "eb1eefbf6f2d5d238ee4b5fadf92d96437e3c3765fd7c9d95e99a5245ba8bb37",
     "libs/go/zmscli/cli.go": "9783e7fbccbdb93f7cb274b14bfcbe628b8f6896901dfc4c13875bad0646cc83",
     "libs/go/zmscli/domain.go": "b042c86c10597240edc1f595a344a9b7df974a1ceb368db0c0096633e7b18f01",

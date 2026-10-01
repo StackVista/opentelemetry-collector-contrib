@@ -7,3 +7,7 @@ go.sum linguist-generated=true
 # To avoid git status and other tools reporting files due to different line endings
 # normalize the line endings to LF
 * text=auto eol=lf
+
+# Preserve checksum-anchored upstream assets byte-for-byte.
+/third_party/prometheus/** -text
+/third_party/athenz/** -text

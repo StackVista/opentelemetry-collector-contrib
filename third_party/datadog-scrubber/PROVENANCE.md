@@ -26,3 +26,9 @@ published independent module distribution does not include those siblings.
 Published owning requirements remain; explicit consumer selections do not rely
 on dependency replacements propagating. Upstream immutable source is
 `cd89eab046d6`; no DataDog generation/API upgrade is applied.
+
+Upstream test dependencies use this fork's already selected compatible Testify
+1.12.1 line, so independent retained tests do not restore archived parser code.
+Go minima remain governed by actual dependencies; no product toolchain bump
+is introduced. Original toolchain directives are removed by the existing native
+tidy helper without changing the supported minimum.

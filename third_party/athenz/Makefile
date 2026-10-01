@@ -1,6 +1,6 @@
 include ../../Makefile.Common
 
-ATTRIBUTION_CMD := GOOS="" GOARCH="" $(GOCMD) run ../../internal/buildscripts/thirdparty-attribution/main.go -policy-sha d55a574ed381288f8cc20b7fc13024595780157303a64dce8359d4520b4e1b97
+ATTRIBUTION_CMD := GOOS="" GOARCH="" $(GOCMD) run ../../internal/buildscripts/thirdparty-attribution/main.go -policy-sha 26199b8076817aa3cd38185d9a89b3732a3ae868e68c1a536a1d8eaacc2e0ffa
 ALL_SRC_AND_SHELL_CMD := $(ATTRIBUTION_CMD) -owned-source
 ALL_SRC_AND_DOC_CMD := $(ATTRIBUTION_CMD) -owned-docs
 

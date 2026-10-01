@@ -23,3 +23,11 @@ candidate does not establish release or deployment qualification.
 
 The original upstream Makefile is retained byte-for-byte. Owned GNUmakefile
 provides native integration without replacing the original build artifact.
+
+Upstream test dependencies use this fork's already selected compatible Testify
+1.12.1 line, so independent retained tests do not restore archived parser code.
+Go minima remain governed by actual dependencies; no product toolchain bump
+is introduced. Original toolchain directives are removed by the existing native
+tidy helper without changing the supported minimum.
+
+Scoped Git attributes retain original asset bytes, including line endings.

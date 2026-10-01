@@ -201,3 +201,5 @@ retract (
 	v0.76.1
 	v0.65.0
 )
+
+replace github.com/prometheus/prometheus => ../../third_party/prometheus

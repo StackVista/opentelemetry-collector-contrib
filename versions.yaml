@@ -339,3 +339,12 @@ excluded-modules:
   - github.com/open-telemetry/opentelemetry-collector-contrib/cmd/checkapi/internal/altpkg/receiver/altreceiver
   - github.com/ua-parser/uap-go
   - github.com/scaleway/scaleway-sdk-go
+  - go.opentelemetry.io/otel/schema
+  - github.com/aerospike/aerospike-client-go/v8
+  - github.com/DataDog/viper
+  - github.com/AthenZ/athenz
+  - github.com/DataDog/datadog-agent/pkg/util/scrubber
+  - github.com/DataDog/datadog-agent/pkg/config/nodetreemodel
+  - github.com/DataDog/datadog-agent/pkg/config/setup
+  - github.com/DataDog/datadog-agent/comp/logs/agent/config
+  - github.com/prometheus/prometheus

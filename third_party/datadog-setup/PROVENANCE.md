@@ -29,3 +29,15 @@ on dependency replacements propagating. Upstream immutable source is
 
 Native tests/lint select upstream `test` helpers via their documented build tag.
 Production builds do not set this tag. Original source bytes are unchanged.
+
+Independent published requirements use the actual selected-generation support
+modules from the Contrib distribution, checksum-verified at cd89eab046d6.
+This replaces monorepo-only relative selections and stale/unpublished direct
+requirements without upgrading the DataDog API generation. Exact dependency
+versions and checksums are in the owned go.mod/go.sum and pinned policy.
+
+Upstream test dependencies use this fork's already selected compatible Testify
+1.12.1 line, so independent retained tests do not restore archived parser code.
+Go minima remain governed by actual dependencies; no product toolchain bump
+is introduced. Original toolchain directives are removed by the existing native
+tidy helper without changing the supported minimum.

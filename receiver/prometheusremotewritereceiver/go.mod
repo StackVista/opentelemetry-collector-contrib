@@ -150,3 +150,5 @@ replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/delt
 replace github.com/open-telemetry/opentelemetry-collector-contrib/pkg/translator/prometheus => ../../pkg/translator/prometheus
 
 replace github.com/open-telemetry/opentelemetry-collector-contrib/internal/common => ../../internal/common
+
+replace github.com/prometheus/prometheus => ../../third_party/prometheus

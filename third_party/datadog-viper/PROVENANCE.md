@@ -23,3 +23,14 @@ candidate does not establish release or deployment qualification.
 
 Original upstream Makefile is retained byte-for-byte; owned GNUmakefile
 provides native integration without replacing that original asset.
+
+The selected b33ffa9792d9 DataDog revision already omits HCL from supported
+file extensions; the new before/after fixture preserves that rejection and YAML
+scalar/error behavior. Reusing reviewed v1.14.0 would change mapstructure and
+HCL behavior, so this candidate retains the exact selected later source.
+
+Upstream test dependencies use this fork's already selected compatible Testify
+1.12.1 line, so independent retained tests do not restore archived parser code.
+Go minima remain governed by actual dependencies; no product toolchain bump
+is introduced. Original toolchain directives are removed by the existing native
+tidy helper without changing the supported minimum.

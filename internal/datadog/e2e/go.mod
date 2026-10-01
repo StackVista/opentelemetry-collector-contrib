@@ -498,8 +498,6 @@ require (
 	gopkg.in/evanphx/json-patch.v4 v4.12.0 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
-	gopkg.in/yaml.v2 v2.4.0 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
 	k8s.io/api v0.34.1 // indirect
 	k8s.io/apimachinery v0.34.1 // indirect
 	k8s.io/client-go v0.34.1 // indirect
@@ -593,3 +591,15 @@ replace github.com/open-telemetry/opentelemetry-collector-contrib/internal/corei
 replace github.com/ua-parser/uap-go => ../../../third_party/uap-go
 
 replace github.com/scaleway/scaleway-sdk-go => ../../../third_party/scaleway-sdk-go
+
+replace github.com/DataDog/viper => ../../../third_party/datadog-viper
+
+replace github.com/DataDog/datadog-agent/pkg/util/scrubber => ../../../third_party/datadog-scrubber
+
+replace github.com/DataDog/datadog-agent/pkg/config/nodetreemodel => ../../../third_party/datadog-nodetreemodel
+
+replace github.com/DataDog/datadog-agent/pkg/config/setup => ../../../third_party/datadog-setup
+
+replace github.com/DataDog/datadog-agent/comp/logs/agent/config => ../../../third_party/datadog-logs-config
+
+replace github.com/prometheus/prometheus => ../../../third_party/prometheus

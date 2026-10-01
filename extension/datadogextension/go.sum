@@ -17,8 +17,8 @@ github.com/DataDog/datadog-agent/comp/core/log/mock v0.64.0-devel h1:x1/H6+u1wW9
 github.com/DataDog/datadog-agent/comp/core/log/mock v0.64.0-devel/go.mod h1:LBFg7mnbvtMLLTf6nF2Ml0uaq91h2ywPkVVtLRPo5pM=
 github.com/DataDog/datadog-agent/comp/core/secrets/def v0.73.0-devel.0.20251030121902-cd89eab046d6 h1:hMbdd/fv72FE2T1xMRUYp8uzqhbxJ5CfQqShox1js30=
 github.com/DataDog/datadog-agent/comp/core/secrets/def v0.73.0-devel.0.20251030121902-cd89eab046d6/go.mod h1:mV7hPUjpP86cntCTF3J7BsL1aXnwNGrmIhWTUCuXtUw=
-github.com/DataDog/datadog-agent/comp/core/secrets/mock v0.70.0 h1:4qqGLbfJU6xBml/ErQ/pqamFWFHQG57MwQRCcxhBJ7Y=
-github.com/DataDog/datadog-agent/comp/core/secrets/mock v0.70.0/go.mod h1:oZhWOObGSvWooOnq+WJrdkx77wb1uRGeA/+fhzHDnn4=
+github.com/DataDog/datadog-agent/comp/core/secrets/mock v0.73.0-devel.0.20251030121902-cd89eab046d6 h1:n+fybTnZDdyKqGErquZpScQhihl0QAPgnns0qISjkVg=
+github.com/DataDog/datadog-agent/comp/core/secrets/mock v0.73.0-devel.0.20251030121902-cd89eab046d6/go.mod h1:KP9ind/82SKXqYOA6s/ALupbH3SOohScC7Jn5FUMZjw=
 github.com/DataDog/datadog-agent/comp/core/secrets/noop-impl v0.0.0-20251030121902-cd89eab046d6 h1:KYnknUSJVPlKr8e9UWmKXmrpdGS8dW0f35wBpWvH5gM=
 github.com/DataDog/datadog-agent/comp/core/secrets/noop-impl v0.0.0-20251030121902-cd89eab046d6/go.mod h1:Hot/gkdKQA4OzlaAB9au1Vrb0Dw+bgxnJ2tAnKfGbvw=
 github.com/DataDog/datadog-agent/comp/core/secrets/utils v0.70.0 h1:i7y3at4X4TSdaCpZU7JoRerIbezD+LudVsB2rDd4Leo=
@@ -41,8 +41,6 @@ github.com/DataDog/datadog-agent/comp/forwarder/defaultforwarder v0.73.0-devel.0
 github.com/DataDog/datadog-agent/comp/forwarder/defaultforwarder v0.73.0-devel.0.20251030121902-cd89eab046d6/go.mod h1:CHhJj+eZr5je4yQUE6mTJrr4H6mtFgzsDzkHBcvimG0=
 github.com/DataDog/datadog-agent/comp/forwarder/orchestrator/orchestratorinterface v0.73.0-devel.0.20251030121902-cd89eab046d6 h1:iRjQJS3YHv3nBwAyWmxAP0/p4rMGoF4B6ROK71waoa0=
 github.com/DataDog/datadog-agent/comp/forwarder/orchestrator/orchestratorinterface v0.73.0-devel.0.20251030121902-cd89eab046d6/go.mod h1:nZe//QUuCRYSfZvxdTsXC8CeQColK5d72rhfxQucmWE=
-github.com/DataDog/datadog-agent/comp/logs/agent/config v0.73.0-devel.0.20251030121902-cd89eab046d6 h1:8LTxkJdRLdcZKeMk96Hpu5X1qR6h7maoiopNUzGxbd8=
-github.com/DataDog/datadog-agent/comp/logs/agent/config v0.73.0-devel.0.20251030121902-cd89eab046d6/go.mod h1:IVuf9cLGibnYuHnthQNcYoJk18tHUw/eL2d/IWcilR0=
 github.com/DataDog/datadog-agent/comp/otelcol/otlp/testutil v0.73.0-devel.0.20251030121902-cd89eab046d6 h1:AsPMAzhnhjXcIV/4ftafqXvlCazLoxmF1FrADo+jzYU=
 github.com/DataDog/datadog-agent/comp/otelcol/otlp/testutil v0.73.0-devel.0.20251030121902-cd89eab046d6/go.mod h1:1Jr9Y6LW0OwvwmmUt8SZyDFs1ZBSJPlAN+8VUjdb8to=
 github.com/DataDog/datadog-agent/comp/serializer/metricscompression v0.73.0-devel.0.20251030121902-cd89eab046d6 h1:ESypUYSgVmcTemcSEL7LfK39h0wH2otBT4QZ1Ih25QE=
@@ -61,10 +59,6 @@ github.com/DataDog/datadog-agent/pkg/config/mock v0.73.0-devel.0.20251030121902-
 github.com/DataDog/datadog-agent/pkg/config/mock v0.73.0-devel.0.20251030121902-cd89eab046d6/go.mod h1:v0K6eonAOcJb/4oKtSu//EbeuGApKFV6uYecObz0RtE=
 github.com/DataDog/datadog-agent/pkg/config/model v0.73.0-devel.0.20251030121902-cd89eab046d6 h1:1nIOAr475VJNvf9C+uROmM11fow4gEmIxYVLQS9nb+Q=
 github.com/DataDog/datadog-agent/pkg/config/model v0.73.0-devel.0.20251030121902-cd89eab046d6/go.mod h1:f0QA7v2C4RsLmTbh0D38GCJX1FtNvjbXidwui0fcVjg=
-github.com/DataDog/datadog-agent/pkg/config/nodetreemodel v0.73.0-devel.0.20251030121902-cd89eab046d6 h1:lHgciErr2r+Ahma3VPrCMOOLx4zrtOu8pbK3KOrV1Oc=
-github.com/DataDog/datadog-agent/pkg/config/nodetreemodel v0.73.0-devel.0.20251030121902-cd89eab046d6/go.mod h1:U5DBsueALVFTBmxRlSQ2rw+h2/Jb0O4nhD1B1QfRBsA=
-github.com/DataDog/datadog-agent/pkg/config/setup v0.73.0-devel.0.20251030121902-cd89eab046d6 h1:utSW1G7hlgJL2WQXO1zY+Mf9sjuHNlpywfvx7IKEXaA=
-github.com/DataDog/datadog-agent/pkg/config/setup v0.73.0-devel.0.20251030121902-cd89eab046d6/go.mod h1:l9WJzJVI8XYDBg1KnFO8xyjpCK3BzKfgr26ZYbVJoh8=
 github.com/DataDog/datadog-agent/pkg/config/structure v0.73.0-devel.0.20251030121902-cd89eab046d6 h1:HtHWQp39HRusnJm3GcKChPMmbWcCyaKomml0D1UyoeM=
 github.com/DataDog/datadog-agent/pkg/config/structure v0.73.0-devel.0.20251030121902-cd89eab046d6/go.mod h1:Agv9qApVxn27hHEbvkEaO3xA/Tbeiwm7yeul3r762Co=
 github.com/DataDog/datadog-agent/pkg/config/teeconfig v0.73.0-devel.0.20251030121902-cd89eab046d6 h1:zethR83QKT/MS3Mc+XweefSNt5UTKxJLWY3u0H2Z3zM=
@@ -139,8 +133,6 @@ github.com/DataDog/datadog-agent/pkg/util/quantile v0.73.0-devel.0.2025103012190
 github.com/DataDog/datadog-agent/pkg/util/quantile v0.73.0-devel.0.20251030121902-cd89eab046d6/go.mod h1:EVKRDNH+sdi9kGHc9mkKEKaHhGCdNvhIEp7fexg2Q40=
 github.com/DataDog/datadog-agent/pkg/util/quantile/sketchtest v0.70.0 h1:SSHZ57LTgLQ99kvnbnHlXecPcb6AmxW/UtA7FZw3NFQ=
 github.com/DataDog/datadog-agent/pkg/util/quantile/sketchtest v0.70.0/go.mod h1:lPU+UeDu2rtZb85l08/kPL6Sr/PiD5NuYOl/YQjOAvY=
-github.com/DataDog/datadog-agent/pkg/util/scrubber v0.73.0-devel.0.20251030121902-cd89eab046d6 h1:iwdmqW1QMeeDH9aCsswtFdoLL7MgggAwcdMwAkV+QsU=
-github.com/DataDog/datadog-agent/pkg/util/scrubber v0.73.0-devel.0.20251030121902-cd89eab046d6/go.mod h1:snLH/x9kuOvE3pwOgE9HPFBOGbNDt2PjkYFqEbMswwg=
 github.com/DataDog/datadog-agent/pkg/util/sort v0.73.0-devel.0.20251030121902-cd89eab046d6 h1:3hWPL2VzghLRpxYvCLiC+Y+HA0KUVeffwAxiE+ppseo=
 github.com/DataDog/datadog-agent/pkg/util/sort v0.73.0-devel.0.20251030121902-cd89eab046d6/go.mod h1:meVtdZ7b1vI/DsNCM9A5oN+OJswZjx/nAPA/WfpUk7w=
 github.com/DataDog/datadog-agent/pkg/util/system v0.73.0-devel.0.20251030121902-cd89eab046d6 h1:5DB2Zqqrw0evW08PxEQibh+7Y39ijdm2iL1n8qwJmm0=
@@ -161,8 +153,6 @@ github.com/DataDog/mmh3 v0.0.0-20210722141835-012dc69a9e49 h1:EbzDX8HPk5uE2FsJYx
 github.com/DataDog/mmh3 v0.0.0-20210722141835-012dc69a9e49/go.mod h1:SvsjzyJlSg0rKsqYgdcFxeEVflx3ZNAyFfkUHP0TxXg=
 github.com/DataDog/sketches-go v1.4.7 h1:eHs5/0i2Sdf20Zkj0udVFWuCrXGRFig2Dcfm5rtcTxc=
 github.com/DataDog/sketches-go v1.4.7/go.mod h1:eAmQ/EBmtSO+nQp7IZMZVRPT4BQTmIc5RZQ+deGlTPM=
-github.com/DataDog/viper v1.14.1-0.20251008075154-b33ffa9792d9 h1:uX4ZqokylxBI67r+AN09CiFY+s8Frmf33YZlyqIMBc4=
-github.com/DataDog/viper v1.14.1-0.20251008075154-b33ffa9792d9/go.mod h1:QGomve/3EbYfi58jADS97U2OKfsxqh2pWemuT0azbdk=
 github.com/DataDog/zstd v1.5.7 h1:ybO8RBeh29qrxIhCA9E8gKY6xfONU9T6G6aP9DTKfLE=
 github.com/DataDog/zstd v1.5.7/go.mod h1:g4AWEaM3yOg3HYfnJ3YIawPnVdXJh9QME85blwSAmyw=
 github.com/DataDog/zstd_0 v0.0.0-20210310093942-586c1286621f h1:5Vuo4niPKFkfwW55jV4vY0ih3VQ9RaQqeqY67fvRn8A=
@@ -461,7 +451,6 @@ github.com/stretchr/objx v0.5.3 h1:jmXUvGomnU1o3W/V5h2VEradbpJDwGrzugQQvL0POH4=
 github.com/stretchr/objx v0.5.3/go.mod h1:rDQraq+vQZU7Fde9LOZLr8Tax6zZvy4kuNKF+QYS+U0=
 github.com/stretchr/testify v1.2.2/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXfy6kDkUVs=
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
-github.com/stretchr/testify v1.4.0/go.mod h1:j7eGeouHqKxXV5pUuKE4zz7dFj8WfuZ+81PSLYec5m4=
 github.com/stretchr/testify v1.5.1/go.mod h1:5W2xD1RspED5o8YsWQXVCued0rvSQ+mT+I5cxcmMvtA=
 github.com/stretchr/testify v1.7.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/stretchr/testify v1.8.0/go.mod h1:yNjHg4UonilssWZ8iaSj1OCr/vHnekPRkoO+kdMU+MU=
@@ -763,7 +752,6 @@ gopkg.in/evanphx/json-patch.v4 v4.12.0/go.mod h1:p8EYWUEYMpynmqDbY58zCKCFZw8pRWM
 gopkg.in/inf.v0 v0.9.1 h1:73M5CoZyi3ZLMOyDlQh031Cx6N9NDJ2Vvfl76EDAgDc=
 gopkg.in/inf.v0 v0.9.1/go.mod h1:cWUDdTG/fYaXco+Dcufb5Vnc6Gp2YChqWtbxRZE0mXw=
 gopkg.in/yaml.v2 v2.2.2/go.mod h1:hI93XBmqTisBFMUTm0b8Fm+jr3Dg1NNxqwp+5A1VGuI=
-gopkg.in/yaml.v2 v2.2.5/go.mod h1:hI93XBmqTisBFMUTm0b8Fm+jr3Dg1NNxqwp+5A1VGuI=
 gopkg.in/yaml.v2 v2.4.0 h1:D8xgwECY7CYvx+Y2n4sBz93Jn9JRvxdiyyo8CTfuKaY=
 gopkg.in/yaml.v2 v2.4.0/go.mod h1:RDklbk79AGWmwhnvt/jBztapEOGDOx6ZbXqjP6csGnQ=
 gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=

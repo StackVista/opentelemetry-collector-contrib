@@ -12,8 +12,6 @@ github.com/DataDog/datadog-agent/pkg/trace v0.73.0-devel.0.20251030121902-cd89ea
 github.com/DataDog/datadog-agent/pkg/trace v0.73.0-devel.0.20251030121902-cd89eab046d6/go.mod h1:3ZknnEramPTS0GuQ/4+67TX4PC9FRwFsgx5IgNjiz78=
 github.com/DataDog/datadog-agent/pkg/util/log v0.73.0-devel.0.20251030121902-cd89eab046d6 h1:NSa38vidKozOO4JeBr/G+FQeiLBma52USyd8ofgL9s8=
 github.com/DataDog/datadog-agent/pkg/util/log v0.73.0-devel.0.20251030121902-cd89eab046d6/go.mod h1:aUXyAIs3FeAQFDaajLkoS4747y6GQRhJ0vBusfVguVI=
-github.com/DataDog/datadog-agent/pkg/util/scrubber v0.73.0-devel.0.20251030121902-cd89eab046d6 h1:iwdmqW1QMeeDH9aCsswtFdoLL7MgggAwcdMwAkV+QsU=
-github.com/DataDog/datadog-agent/pkg/util/scrubber v0.73.0-devel.0.20251030121902-cd89eab046d6/go.mod h1:snLH/x9kuOvE3pwOgE9HPFBOGbNDt2PjkYFqEbMswwg=
 github.com/DataDog/datadog-agent/pkg/version v0.73.0-devel.0.20251030121902-cd89eab046d6 h1:CA0UezdSmKT/CHu8ehd2S8d6dT39UnARytlJBYhu/1c=
 github.com/DataDog/datadog-agent/pkg/version v0.73.0-devel.0.20251030121902-cd89eab046d6/go.mod h1:6NoHdUrJ/ttav4SSas6XiDLfYbF4Ulx0D0cBpbk4vvI=
 github.com/DataDog/datadog-go/v5 v5.8.1 h1:+GOES5W9zpKlhwHptZVW2C0NLVf7ilr7pHkDcbNvpIc=

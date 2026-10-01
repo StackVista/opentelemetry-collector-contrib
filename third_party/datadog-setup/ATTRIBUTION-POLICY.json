@@ -2,8 +2,8 @@
   "Maintained": {
     "config.go": "032e6fefceb8800b10c24030242b8aad1ba813dcd45727a7458a84ff9175592f",
     "config_test.go": "7dc036825aa63e5430a3adc114ab11cf7c3748e717fed414c7f896576fffab1a",
-    "go.mod": "13320eb1e858094742331630d31bc8fc7d3aa984bd89b83635658c56ead2cd1d",
-    "go.sum": "78beabce14709bd4051d73b03c048e6559446b3a8318758a4f2a42e8178c6a9c"
+    "go.mod": "2e0416ba04ee3347cd7857e28c437db015d2c89820671ccc1028d73a6aab5690",
+    "go.sum": "4b9e63cce35694bb3d7f9b2db1401dc572be202d17ae9eee11b702b974299280"
   },
   "Manifests": {
     "UPSTREAM-SHA256SUMS": "a8bbd06704ec4aa2e2c117ddf79e1e8b5beac312bc3487a82bbe2ae84f702db7"

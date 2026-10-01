@@ -20,3 +20,9 @@ Original source stays byte-exact through formatting/generation. Remove this
 backport after a compatible maintained owning release passes retained upstream
 and actual consumer/distribution checks. Product adoption is independent; this
 candidate does not establish release or deployment qualification.
+
+Upstream test dependencies use this fork's already selected compatible Testify
+1.12.1 line, so independent retained tests do not restore archived parser code.
+Go minima remain governed by actual dependencies; no product toolchain bump
+is introduced. Original toolchain directives are removed by the existing native
+tidy helper without changing the supported minimum.

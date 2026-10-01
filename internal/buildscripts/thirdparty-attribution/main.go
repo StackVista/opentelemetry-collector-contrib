@@ -81,8 +81,8 @@ func verify(root string, p policy) ([]string, error) {
 		}
 		scanner := bufio.NewScanner(strings.NewReader(string(data)))
 		for scanner.Scan() {
-			fields := strings.Fields(scanner.Text())
-			if len(fields) != 2 || len(fields[0]) != 64 || !safePath(fields[1]) {
+			fields := strings.SplitN(scanner.Text(), "  ", 2)
+			if len(fields) != 2 || len(fields[0]) != 64 || fields[1] == "." || filepath.ToSlash(filepath.Clean(fields[1])) != fields[1] || filepath.IsAbs(fields[1]) || strings.HasPrefix(fields[1], "../") {
 				return nil, fmt.Errorf("invalid manifest: %s", manifest)
 			}
 			if _, exists := original[fields[1]]; exists {

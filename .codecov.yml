@@ -1004,6 +1004,22 @@ component_management:
     name: testbed_mockdatasenders_mockdatadogagent
     paths:
     - testbed/mockdatasenders/mockdatadogagentexporter/**
+  - component_id: github.com_aerospike_aerospike-client-go_v8
+    name: github.com_aerospike_aerospike-client-go_v8
+    paths:
+    - third_party/aerospike-client-go/**
+  - component_id: github.com_AthenZ_athenz
+    name: github.com_AthenZ_athenz
+    paths:
+    - third_party/athenz/**
+  - component_id: github.com_DataDog_viper
+    name: github.com_DataDog_viper
+    paths:
+    - third_party/datadog-viper/**
+  - component_id: go.opentelemetry.io_otel_schema
+    name: go.opentelemetry.io_otel_schema
+    paths:
+    - third_party/otel-schema/**
   - component_id: github.com_scaleway_scaleway-sdk-go
     name: github.com_scaleway_scaleway-sdk-go
     paths:
