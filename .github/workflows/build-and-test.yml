@@ -352,12 +352,35 @@ jobs:
       - name: Install dependencies
         if: steps.go-setup.outputs.cache-hit != 'true'
         run: make -j2 gomoddownload
-      - name: Cache Docker images.
-        uses: AndreKurait/docker-cache@0fe76702a40db986d9663c24954fc14c6a6031b7 # 0.6.0
+      - name: Cache Docker images
+        if: github.event_name == 'pull_request'
+        id: docker-cache
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4; zizmor: ignore[cache-poisoning] Docker images are cached only in PR-scoped integration jobs, never publication jobs.
         with:
-          key: docker-${{ matrix.group }}
+          path: ${{ runner.temp }}/docker-images
+          key: docker-v2-${{ runner.os }}-${{ github.job }}-${{ matrix.group }}-${{ hashFiles('**/go.sum') }}
+      - name: Load cached Docker images
+        shell: bash
+        env:
+          DOCKER_CACHE_DIR: ${{ runner.temp }}/docker-images
+        run: |
+          if [[ -f "$DOCKER_CACHE_DIR/images.tar" ]]; then
+            docker load --input "$DOCKER_CACHE_DIR/images.tar"
+          fi
       - name: Run Integration Tests
         run: make gointegration-test GROUP=${{ matrix.group }}
+      - name: Save Docker images for cache
+        if: success() && steps.docker-cache.outputs.cache-hit != 'true'
+        shell: bash
+        env:
+          DOCKER_CACHE_DIR: ${{ runner.temp }}/docker-images
+        run: |
+          mapfile -t images < <(docker image ls --format '{{.Repository}}:{{.Tag}}' | awk '!/<none>/')
+          if (( ${#images[@]} )); then
+            mkdir -p "$DOCKER_CACHE_DIR"
+            docker save --output "$DOCKER_CACHE_DIR/images.tar" "${images[@]}"
+          fi
+
 
   integration-sudo-tests-matrix:
     strategy:
@@ -380,12 +403,35 @@ jobs:
       - name: Install dependencies
         if: steps.go-setup.outputs.cache-hit != 'true'
         run: make -j2 gomoddownload
-      - name: Cache Docker images.
-        uses: AndreKurait/docker-cache@0fe76702a40db986d9663c24954fc14c6a6031b7 # 0.6.0
+      - name: Cache Docker images
+        if: github.event_name == 'pull_request'
+        id: docker-cache
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4; zizmor: ignore[cache-poisoning] Docker images are cached only in PR-scoped integration jobs, never publication jobs.
         with:
-          key: docker-${{ matrix.group }}
+          path: ${{ runner.temp }}/docker-images
+          key: docker-v2-${{ runner.os }}-${{ github.job }}-${{ matrix.group }}-${{ hashFiles('**/go.sum') }}
+      - name: Load cached Docker images
+        shell: bash
+        env:
+          DOCKER_CACHE_DIR: ${{ runner.temp }}/docker-images
+        run: |
+          if [[ -f "$DOCKER_CACHE_DIR/images.tar" ]]; then
+            docker load --input "$DOCKER_CACHE_DIR/images.tar"
+          fi
       - name: Run Integration Tests
         run: make --no-print-directory -C ${{ matrix.group }} mod-integration-sudo-test
+      - name: Save Docker images for cache
+        if: success() && steps.docker-cache.outputs.cache-hit != 'true'
+        shell: bash
+        env:
+          DOCKER_CACHE_DIR: ${{ runner.temp }}/docker-images
+        run: |
+          mapfile -t images < <(docker image ls --format '{{.Repository}}:{{.Tag}}' | awk '!/<none>/')
+          if (( ${#images[@]} )); then
+            mkdir -p "$DOCKER_CACHE_DIR"
+            docker save --output "$DOCKER_CACHE_DIR/images.tar" "${images[@]}"
+          fi
+
 
 
   integration-tests:
