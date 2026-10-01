@@ -1,0 +1,13 @@
+{
+  "Maintained": {
+    "go.mod": "85a41680b0fcf3af286a2b33c150a1b632eb95626e244861f9d2a62756b02e1c",
+    "go.sum": "2974da363aa7b1a82bd14737d8ab792d149217f5c62e6bbf44ee0159e3a547b9",
+    "libs/go/athenzutils/config.go": "eb1eefbf6f2d5d238ee4b5fadf92d96437e3c3765fd7c9d95e99a5245ba8bb37",
+    "libs/go/zmscli/cli.go": "9783e7fbccbdb93f7cb274b14bfcbe628b8f6896901dfc4c13875bad0646cc83",
+    "libs/go/zmscli/domain.go": "b042c86c10597240edc1f595a344a9b7df974a1ceb368db0c0096633e7b18f01",
+    "utils/zms-cli/zms-cli.go": "9555326635a22e70c91574f329d94805aac2fe4ee953f3df498a4b656ff7e913"
+  },
+  "Manifests": {
+    "UPSTREAM-SHA256SUMS": "d67b800c4db0d8a7ccab302031bfba6eaad9e255c7ac4733e69df3f87f06f3b9"
+  }
+}
