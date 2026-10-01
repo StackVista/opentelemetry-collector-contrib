@@ -4,5 +4,4 @@ OWNED-FILES
 PROVENANCE.md
 UPSTREAM-MODULE.json
 UPSTREAM-SHA256SUMS
-config/provider/yaml_maintenance_test.go
-internal/yamlmatcher/contract_test.go
+yaml_contract_test.go

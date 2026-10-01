@@ -1,4 +1,6 @@
 ignored_paths:
+  - third_party/go-vcr
+  - third_party/datadog-secrets-mock
   - third_party/aerospike-client-go
   - third_party/athenz
   - third_party/datadog-logs-config

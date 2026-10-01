@@ -1024,6 +1024,10 @@ component_management:
     name: third_party_datadog-scrubber
     paths:
     - third_party/datadog-scrubber/**
+  - component_id: third_party_datadog-secrets-mock
+    name: third_party_datadog-secrets-mock
+    paths:
+    - third_party/datadog-secrets-mock/**
   - component_id: third_party_datadog-setup
     name: third_party_datadog-setup
     paths:
@@ -1032,6 +1036,10 @@ component_management:
     name: third_party_datadog-viper
     paths:
     - third_party/datadog-viper/**
+  - component_id: third_party_go-vcr
+    name: third_party_go-vcr
+    paths:
+    - third_party/go-vcr/**
   - component_id: third_party_otel-schema
     name: third_party_otel-schema
     paths:

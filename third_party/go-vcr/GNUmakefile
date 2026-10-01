@@ -1,6 +1,8 @@
+export GOFLAGS := $(filter-out -mod=%,$(GOFLAGS)) -mod=readonly
+
 include ../../Makefile.Common
 
-ATTRIBUTION_CMD := GOOS="" GOARCH="" $(GOCMD) run ../../internal/buildscripts/thirdparty-attribution/main.go -policy-sha e164c5b15f93be95ab26d03b7ef787807ba8b1bea2eb4462ce328a2e9eaee182
+ATTRIBUTION_CMD := GOOS="" GOARCH="" $(GOCMD) run ../../internal/buildscripts/thirdparty-attribution/main.go -policy-sha b1bac8d4bf270fb37599ac28649486c8c3fd461e190f23368c9a00d3647f62bb
 ALL_SRC_AND_SHELL_CMD := $(ATTRIBUTION_CMD) -owned-source
 ALL_SRC_AND_DOC_CMD := $(ATTRIBUTION_CMD) -owned-docs
 

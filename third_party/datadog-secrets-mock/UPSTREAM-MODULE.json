@@ -1,0 +1,13 @@
+{
+  "Path": "github.com/DataDog/datadog-agent/comp/core/secrets/mock",
+  "Version": "v0.73.0-devel.0.20251030121902-cd89eab046d6",
+  "Sum": "h1:n+fybTnZDdyKqGErquZpScQhihl0QAPgnns0qISjkVg=",
+  "GoModSum": "h1:KP9ind/82SKXqYOA6s/ALupbH3SOohScC7Jn5FUMZjw=",
+  "Origin": {
+    "VCS": "git",
+    "URL": "https://github.com/DataDog/datadog-agent",
+    "Subdir": "comp/core/secrets/mock",
+    "Hash": "cd89eab046d6006660af4709889e5cebc65806b7"
+  },
+  "ZipSHA256": "c48e231019f04683fb226fa973e7abe3e70d2c361136ff309e450f79e718ecaa"
+}

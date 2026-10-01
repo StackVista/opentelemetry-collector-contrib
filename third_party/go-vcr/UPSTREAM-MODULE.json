@@ -1,0 +1,13 @@
+{
+  "Path": "github.com/dnaeon/go-vcr",
+  "Version": "v1.2.0",
+  "Sum": "h1:zHCHvJYTMh1N7xnV7zf1m1GPBF9Ad0Jk/whtQ1663qI=",
+  "GoModSum": "h1:R4UdLID7HZT3taECzJs4YgbbH6PIGXB6W/sc5OLb6RQ=",
+  "ZipSHA256": "6d34b7e17c158d51ffc34f6ac64df05ab736b2ae50c0db07be4a9556dac10c52",
+  "Origin": {
+    "VCS": "git",
+    "URL": "https://github.com/dnaeon/go-vcr",
+    "Hash": "772bae50809638c7542567970ab01724dcd522ca",
+    "Ref": "refs/tags/v1.2.0"
+  }
+}

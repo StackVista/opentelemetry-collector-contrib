@@ -24,10 +24,7 @@ require (
 	golang.org/x/sys v0.37.0
 )
 
-require (
-	go.yaml.in/yaml/v3 v3.0.5 // indirect
-	gopkg.in/yaml.v2 v2.4.0 // indirect
-)
+require go.yaml.in/yaml/v3 v3.0.5 // indirect
 
 require (
 	github.com/DataDog/datadog-agent/comp/core/secrets/utils v0.70.0 // indirect
@@ -71,3 +68,5 @@ replace github.com/DataDog/datadog-agent/pkg/config/nodetreemodel => ../datadog-
 replace github.com/DataDog/datadog-agent/pkg/util/scrubber => ../datadog-scrubber
 
 replace github.com/DataDog/viper => ../datadog-viper
+
+replace github.com/DataDog/datadog-agent/comp/core/secrets/mock => ../datadog-secrets-mock

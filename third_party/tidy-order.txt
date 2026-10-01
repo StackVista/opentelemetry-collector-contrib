@@ -1,3 +1,5 @@
+third_party/go-vcr
+third_party/datadog-secrets-mock
 third_party/uap-go
 third_party/scaleway-sdk-go
 third_party/otel-schema
