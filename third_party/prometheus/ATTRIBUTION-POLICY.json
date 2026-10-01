@@ -1,7 +1,7 @@
 {
   "Maintained": {
-    "go.mod": "0e9d17c3f866a68942d183a5815e69f36b155267c6ff14faecb902955e2dc8e4",
-    "go.sum": "c6b456381432ff9a4fc110587f7a47f8e026994f18ee6d86b9becc2a29a9bd34",
+    "go.mod": "3648c47ee3c9cdfa1bc1e45bb94f5d069f04511646b07e817046084315473148",
+    "go.sum": "cbe144f5209794b02fd33e16eb0ab268675992931b5bfa00f4f8aaa8321c46d2",
     "model/rulefmt/rulefmt.go": "53633716730aa392ecf002abcd9964ae943076b7f37a8930f49e39b163bd20f8",
     "model/rulefmt/rulefmt_test.go": "b360e9b726b7b697f2cb8e9746791dcac849834390fb93298ea37c013a6dbbdf"
   },
