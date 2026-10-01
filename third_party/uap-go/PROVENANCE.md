@@ -43,3 +43,22 @@ Product builders currently select upstream contrib; this backport does not propa
 to independently generated product binaries or establish release/deployment adoption.
 
 Tracking: https://github.com/StackVista/stackstate/issues/717
+
+## Required attribution gate
+
+This nested owner's native `checklicense`/`lint` path first runs the fail-closed
+`internal/attribution` guard on the host platform, including during Windows
+cross-lint. Original inventories are pinned by their manifest SHA-256 values;
+every original file is required and checked byte-for-byte. The six reviewed
+parser/metadata/cosmetic maintenance files have exact permitted hashes in the
+guard. License/copyright assets have no maintenance exception. Any new upstream
+change requires explicit review and updating its narrow hash anchor.
+
+`OWNED-FILES` accounts separately for additions. Missing, overlapping, symlinked
+or unaccounted files fail. Every owned Go/shell file is passed to the unchanged
+common first-party header checker; adding owned source requires inventory
+registration and genuine first-party headers. The module stays registered for
+native lint. Root/common source selection, parser modules and upstream bytes are
+unchanged by this integration. Tests exercise lost/altered attribution, source,
+manifest and inventory failures; native header checks also reject headerless
+new owned Go/shell files.

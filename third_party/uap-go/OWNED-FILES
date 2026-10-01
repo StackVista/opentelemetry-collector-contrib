@@ -1,0 +1,8 @@
+Makefile
+OWNED-FILES
+PROVENANCE.md
+UAP-CORE-SHA256SUMS
+UPSTREAM-SHA256SUMS
+internal/attribution/main.go
+internal/attribution/main_test.go
+uaparser/yaml_maintenance_test.go
