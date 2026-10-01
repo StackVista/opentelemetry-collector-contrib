@@ -1,7 +1,7 @@
 {
   "Maintained": {
-    "go.mod": "cc5b061deda2c6fccc3aa86e558aef24a6b4d3ed32bb95638d2bf673617ef74c",
-    "go.sum": "bee1095bdef9d382b9c6d06b3c1a15fa1d22d863e5d983d56c6aa44e7c9f8f3a",
+    "go.mod": "f17dfba752e067f045b3d2f63bf59ca370bebe51679f11b4c71cf286691128dd",
+    "go.sum": "19c38e7f22b7dd37fd09615371d5a6a2d58f4fcebbf738aaae11ca6e595ac58b",
     "viper.go": "10e4d92204f0c9e4ad49787fb6d9cb2036f9d2652575aee774c9965a15566b6f"
   },
   "Manifests": {
