@@ -349,3 +349,5 @@ replace github.com/open-telemetry/opentelemetry-collector-contrib/receiver/otela
 replace github.com/open-telemetry/opentelemetry-collector-contrib/exporter/otelarrowexporter => ../../exporter/otelarrowexporter
 
 replace github.com/open-telemetry/opentelemetry-collector-contrib/internal/grpcutil => ../../internal/grpcutil
+
+replace github.com/ua-parser/uap-go => ../../third_party/uap-go

@@ -436,3 +436,5 @@ replace github.com/open-telemetry/opentelemetry-collector-contrib/pkg/datadog =>
 replace github.com/open-telemetry/opentelemetry-collector-contrib/internal/datadog => ../../../internal/datadog
 
 replace github.com/open-telemetry/opentelemetry-collector-contrib/internal/gopsutilenv => ../../../internal/gopsutilenv
+
+replace github.com/ua-parser/uap-go => ../../../third_party/uap-go

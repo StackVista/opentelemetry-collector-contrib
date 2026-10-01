@@ -413,3 +413,5 @@ replace github.com/open-telemetry/opentelemetry-collector-contrib/internal/aws/e
 replace github.com/open-telemetry/opentelemetry-collector-contrib/pkg/datadog => ../../pkg/datadog
 
 replace github.com/open-telemetry/opentelemetry-collector-contrib/internal/datadog => ../../internal/datadog
+
+replace github.com/ua-parser/uap-go => ../../third_party/uap-go

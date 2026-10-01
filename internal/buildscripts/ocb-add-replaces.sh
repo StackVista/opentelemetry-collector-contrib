@@ -13,7 +13,7 @@ cp "$CONFIG_IN" "$CONFIG_OUT"
 
 local_mods=$(find . -type f -name "go.mod" -exec dirname {} \; | sort)
 for mod_path in $local_mods; do
-    mod=${mod_path#"."} # remove initial dot
-    echo "  - github.com/open-telemetry/opentelemetry-collector-contrib$mod => ../..$mod" >> "$CONFIG_OUT"
+    module=$(awk '$1 == "module" {print $2}' "$mod_path/go.mod")
+    echo "  - $module => ../../$mod_path" >> "$CONFIG_OUT"
 done
 echo "Wrote replace statements to $CONFIG_OUT"
