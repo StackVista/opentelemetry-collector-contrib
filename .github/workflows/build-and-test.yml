@@ -355,7 +355,7 @@ jobs:
       - name: Cache Docker images
         if: github.event_name == 'pull_request'
         id: docker-cache
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4; zizmor: ignore[cache-poisoning] Docker images are cached only in PR-scoped integration jobs, never publication jobs.
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # zizmor: ignore[cache-poisoning] (v4; PR-scoped integration cache never enters publication jobs)
         with:
           path: ${{ runner.temp }}/docker-images
           key: docker-v2-${{ runner.os }}-${{ github.job }}-${{ matrix.group }}-${{ hashFiles('**/go.sum') }}
@@ -406,7 +406,7 @@ jobs:
       - name: Cache Docker images
         if: github.event_name == 'pull_request'
         id: docker-cache
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4; zizmor: ignore[cache-poisoning] Docker images are cached only in PR-scoped integration jobs, never publication jobs.
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # zizmor: ignore[cache-poisoning] (v4; PR-scoped integration cache never enters publication jobs)
         with:
           path: ${{ runner.temp }}/docker-images
           key: docker-v2-${{ runner.os }}-${{ github.job }}-${{ matrix.group }}-${{ hashFiles('**/go.sum') }}
