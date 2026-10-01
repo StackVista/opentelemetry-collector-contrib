@@ -1,0 +1,11 @@
+{
+  "Maintained": {
+    "go.mod": "a9b234ae4de0aa866ac7fbbbc658964121616debb5cdeff41890da3d4dbc5e17",
+    "go.sum": "6f951540b929fd401a492095f87f5473eff83413b83f57bdea92f228c1cb223c",
+    "yaml_scrubber.go": "2ff6f689b1b71e6a05f5f0bba2068439aef264eb5a4ab0feb40eb26e2480bec6",
+    "yaml_scrubber_test.go": "3536558b26a7e5279df5007f7005817f16e9b9c3117758352909f2c954ae1ae4"
+  },
+  "Manifests": {
+    "UPSTREAM-SHA256SUMS": "a769a5b6538f2f375bde0bed2564bb411eeb2c21e0a1a533a7490c1c7e17ba97"
+  }
+}
