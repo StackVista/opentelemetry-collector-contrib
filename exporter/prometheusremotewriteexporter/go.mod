@@ -1,6 +1,6 @@
 module github.com/open-telemetry/opentelemetry-collector-contrib/exporter/prometheusremotewriteexporter
 
-go 1.24.0
+go 1.25.0
 
 require (
 	github.com/cenkalti/backoff/v5 v5.0.3
@@ -125,7 +125,7 @@ require (
 	go.opentelemetry.io/collector/receiver v1.44.1-0.20251030084003-6f29b34c24f6 // indirect
 	go.opentelemetry.io/collector/receiver/receivertest v0.138.1-0.20251030084003-6f29b34c24f6 // indirect
 	go.opentelemetry.io/collector/receiver/xreceiver v0.138.1-0.20251030084003-6f29b34c24f6 // indirect
-	go.opentelemetry.io/collector/semconv v0.128.0 // indirect
+	go.opentelemetry.io/collector/semconv v0.128.1-0.20250610090210-188191247685 // indirect
 	go.uber.org/atomic v1.11.0 // indirect
 	go.yaml.in/yaml/v2 v2.4.3 // indirect
 	go.yaml.in/yaml/v3 v3.0.5 // indirect

@@ -1,6 +1,4 @@
 ignored_paths:
-  # Complete upstream owner modules retain their original non-Collector APIs.
-  # Their native attribution, lint and upstream/caller tests remain required.
   - third_party/aerospike-client-go
   - third_party/athenz
   - third_party/datadog-logs-config
