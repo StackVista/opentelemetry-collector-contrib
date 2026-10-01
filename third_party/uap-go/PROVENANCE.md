@@ -58,7 +58,10 @@ change requires explicit review and updating its narrow hash anchor.
 or unaccounted files fail. Every owned Go/shell file is passed to the unchanged
 common first-party header checker; adding owned source requires inventory
 registration and genuine first-party headers. The module stays registered for
-native lint. Root/common source selection, parser modules and upstream bytes are
+native lint. The same inventory distinction applies to this module's common spell-check
+selector: owned source/documents retain spell checking; immutable original regex
+database strings stay exact instead of being rewritten as prose. Root/common
+source selection, parser modules and upstream bytes are
 unchanged by this integration. Tests exercise lost/altered attribution, source,
 manifest and inventory failures; native header checks also reject headerless
 new owned Go/shell files.

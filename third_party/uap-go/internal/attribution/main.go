@@ -37,15 +37,17 @@ var maintained = map[string]string{
 
 func main() {
 	ownedSource := flag.Bool("owned-source", false, "print owned Go/shell paths for the existing header checker")
+	ownedDocs := flag.Bool("owned-docs", false, "print owned source/document paths for the existing spell checker")
 	flag.Parse()
 	owned, err := verify(".")
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
-	if *ownedSource {
+	if *ownedSource || *ownedDocs {
 		for _, name := range owned {
-			if strings.HasSuffix(name, ".go") || strings.HasSuffix(name, ".sh") {
+			if strings.HasSuffix(name, ".go") || (*ownedSource && strings.HasSuffix(name, ".sh")) ||
+				(*ownedDocs && (strings.HasSuffix(name, ".md") || strings.HasSuffix(name, ".yaml"))) {
 				fmt.Println("./" + name)
 			}
 		}
