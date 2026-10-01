@@ -1,0 +1,13 @@
+{
+  "GoModSum": "h1:/7YQG/jOLg7ktxGritmdkZvezE1fa6aWDj0MGDIZvcY=",
+  "Origin": {
+    "Hash": "0aeb4fddc93b64e4e95104d5e8ea8b55ad36fb61",
+    "Ref": "refs/tags/v0.307.1",
+    "URL": "https://github.com/prometheus/prometheus",
+    "VCS": "git"
+  },
+  "Path": "github.com/prometheus/prometheus",
+  "Sum": "h1:Hh3kRMFn+xpQGLe/bR6qpUfW4GXQO0spuYeY7f2JZs4=",
+  "Version": "v0.307.1",
+  "ZipSHA256": "4799ef4948765e648d99ad62af90d0ebbeca62fb3ada506167d5d19c80f8bc34"
+}

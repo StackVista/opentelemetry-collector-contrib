@@ -1,0 +1,13 @@
+{
+  "GoModSum": "h1:snLH/x9kuOvE3pwOgE9HPFBOGbNDt2PjkYFqEbMswwg=",
+  "Origin": {
+    "Hash": "cd89eab046d6006660af4709889e5cebc65806b7",
+    "Subdir": "pkg/util/scrubber",
+    "URL": "https://github.com/DataDog/datadog-agent",
+    "VCS": "git"
+  },
+  "Path": "github.com/DataDog/datadog-agent/pkg/util/scrubber",
+  "Sum": "h1:iwdmqW1QMeeDH9aCsswtFdoLL7MgggAwcdMwAkV+QsU=",
+  "Version": "v0.73.0-devel.0.20251030121902-cd89eab046d6",
+  "ZipSHA256": "a6e5039e15dac30d0981a62b0cedf1a2ad55818a5f502c17568d27ebc5d136fa"
+}

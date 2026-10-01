@@ -1,0 +1,13 @@
+{
+  "GoModSum": "h1:U5DBsueALVFTBmxRlSQ2rw+h2/Jb0O4nhD1B1QfRBsA=",
+  "Origin": {
+    "Hash": "cd89eab046d6006660af4709889e5cebc65806b7",
+    "Subdir": "pkg/config/nodetreemodel",
+    "URL": "https://github.com/DataDog/datadog-agent",
+    "VCS": "git"
+  },
+  "Path": "github.com/DataDog/datadog-agent/pkg/config/nodetreemodel",
+  "Sum": "h1:lHgciErr2r+Ahma3VPrCMOOLx4zrtOu8pbK3KOrV1Oc=",
+  "Version": "v0.73.0-devel.0.20251030121902-cd89eab046d6",
+  "ZipSHA256": "611559230adcb03a63e48a1336fb9bd1098b3e410903fef281bc7a752c988ca7"
+}

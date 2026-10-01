@@ -31,3 +31,7 @@ is introduced. Original toolchain directives are removed by the existing native
 tidy helper without changing the supported minimum.
 
 Scoped Git attributes retain original asset bytes, including line endings.
+
+`UPSTREAM-MODULE.json` records immutable Git origin, original Go checksums and
+module ZIP digest without local cache paths. Complete license/source byte
+inventories and exact maintenance deltas are enforced by the native guard.

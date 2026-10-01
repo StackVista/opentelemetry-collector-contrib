@@ -38,3 +38,7 @@ tidy helper without changing the supported minimum.
 The independently tested module declares Go 1.17, the actual minimum of this
 fork's selected Testify test dependency; maintained YAML v2 itself needs Go 1.15.
 This does not raise any consumer/product Go minimum.
+
+`UPSTREAM-MODULE.json` records immutable Git origin, original Go checksums and
+module ZIP digest without local cache paths. Complete license/source byte
+inventories and exact maintenance deltas are enforced by the native guard.

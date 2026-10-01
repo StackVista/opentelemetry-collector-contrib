@@ -1,0 +1,13 @@
+{
+  "GoModSum": "h1:t1LXZ3QVi4B4lR9qEkyei1eMbuohBJBGs1YY5b5fYEI=",
+  "Origin": {
+    "Hash": "f76469baaae838eeaabbc8b2fd12d496d8a0bef8",
+    "Ref": "refs/tags/v8.4.0",
+    "URL": "https://github.com/aerospike/aerospike-client-go",
+    "VCS": "git"
+  },
+  "Path": "github.com/aerospike/aerospike-client-go/v8",
+  "Sum": "h1:bcFaOMIT09DnWPiXjepHQ7sgZNraqojQBuzEaZnW00I=",
+  "Version": "v8.4.0",
+  "ZipSHA256": "98ae0f25fbabac230ebac718cb0642448a3dfb16c032c4f943ecabb0ca18c6db"
+}

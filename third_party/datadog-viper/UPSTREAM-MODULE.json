@@ -1,0 +1,12 @@
+{
+  "GoModSum": "h1:QGomve/3EbYfi58jADS97U2OKfsxqh2pWemuT0azbdk=",
+  "Origin": {
+    "Hash": "b33ffa9792d9fcd26c68d16c55f17c98cc56c843",
+    "URL": "https://github.com/DataDog/viper",
+    "VCS": "git"
+  },
+  "Path": "github.com/DataDog/viper",
+  "Sum": "h1:uX4ZqokylxBI67r+AN09CiFY+s8Frmf33YZlyqIMBc4=",
+  "Version": "v1.14.1-0.20251008075154-b33ffa9792d9",
+  "ZipSHA256": "de2a7acf30264518464ecb5396ce7aa4350bb69e669a25a80db9bd7244b075c0"
+}

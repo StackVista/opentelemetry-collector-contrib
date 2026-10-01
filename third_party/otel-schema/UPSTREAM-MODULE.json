@@ -1,0 +1,14 @@
+{
+  "GoModSum": "h1:Ge9lCwrk+B2oYsO2+Tv1R97c+1psVHFs5/4oRTI0OeY=",
+  "Origin": {
+    "Hash": "84e3f3ac8b25204f3a0f77a805437a5e08573b35",
+    "Ref": "refs/tags/schema/v0.0.13",
+    "Subdir": "schema",
+    "URL": "https://github.com/open-telemetry/opentelemetry-go",
+    "VCS": "git"
+  },
+  "Path": "go.opentelemetry.io/otel/schema",
+  "Sum": "h1:gf5AhGzU3V4Ll3xGO+D+Eg2VTMqhz2JlPFr5JpVC/3Q=",
+  "Version": "v0.0.13",
+  "ZipSHA256": "6e7bc8ccc25541295dbcb0134ff6afaaec4783d933fc67c0614a824e77c99700"
+}

@@ -1,0 +1,13 @@
+{
+  "GoModSum": "h1:XXDXXgaQzXaBXnJX6x/bH4yF6eon2lkyzQZ0z/dxprE=",
+  "Origin": {
+    "Hash": "5c041c5b6b2d7fcc6d0f79ca9cb427295c8b505e",
+    "Ref": "refs/tags/v1.12.13",
+    "URL": "https://github.com/AthenZ/athenz",
+    "VCS": "git"
+  },
+  "Path": "github.com/AthenZ/athenz",
+  "Sum": "h1:OhZNqZsoBXNrKBJobeUUEirPDnwt0HRo4kQMIO1UwwQ=",
+  "Version": "v1.12.13",
+  "ZipSHA256": "3859bec0d5f6837dd266d6d3dd1dac83c201317ee8e30df279cb43837ca9634c"
+}

@@ -1,0 +1,13 @@
+{
+  "GoModSum": "h1:IVuf9cLGibnYuHnthQNcYoJk18tHUw/eL2d/IWcilR0=",
+  "Origin": {
+    "Hash": "cd89eab046d6006660af4709889e5cebc65806b7",
+    "Subdir": "comp/logs/agent/config",
+    "URL": "https://github.com/DataDog/datadog-agent",
+    "VCS": "git"
+  },
+  "Path": "github.com/DataDog/datadog-agent/comp/logs/agent/config",
+  "Sum": "h1:8LTxkJdRLdcZKeMk96Hpu5X1qR6h7maoiopNUzGxbd8=",
+  "Version": "v0.73.0-devel.0.20251030121902-cd89eab046d6",
+  "ZipSHA256": "16acb3f9277a4f2378a136fd6517eba717441cd627eaa9fe4dc25f1108f80a89"
+}
