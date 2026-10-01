@@ -15,6 +15,8 @@ are retained. `UPSTREAM-SHA256SUMS` describes the original distribution. The two
 YAML imports (production and tests) and module metadata are the only upstream
 source changes: matching maintained `go.yaml.in/yaml/v2 v2.4.3`, requiring Go 1.18.
 Existing caller APIs, LRU version, database loading and scalar semantics are preserved.
+Repository integration adds a Makefile and focused loading/scalar/error tests.
+Copied upstream CI files are inactive source evidence, not repository workflows.
 There are no custom YAML node methods requiring translation.
 
 The omitted upstream Git submodule fixtures are included at the original gitlink
@@ -31,7 +33,7 @@ Each independent consumer explicitly replaces the UAParser owner module with thi
 nested source; generated distributions read actual module identities during OCB
 replacement generation. This is not a legacy parser module-name replacement.
 The module is excluded from contrib release versioning but included in module
-checks and the tidy order. Remove this backport and all consumer replacements
+checks; it is explicitly tidied first because crosslink omits foreign namespaces. Remove this backport and all consumer replacements
 when an independently reviewed compatible maintained owning release preserves
 these contracts and passes the retained suites and actual distribution checks.
 Product builders currently select upstream contrib; this backport does not propagate
