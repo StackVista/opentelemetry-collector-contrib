@@ -3,3 +3,4 @@ Makefile
 OWNED-FILES
 PROVENANCE.md
 UPSTREAM-SHA256SUMS
+config/provider/yaml_maintenance_test.go
