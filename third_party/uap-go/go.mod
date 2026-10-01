@@ -1,6 +1,6 @@
 module github.com/ua-parser/uap-go
 
-go 1.18
+go 1.15
 
 require (
 	github.com/hashicorp/golang-lru v0.5.4

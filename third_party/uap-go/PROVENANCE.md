@@ -13,7 +13,7 @@ Go checksum database verified distribution:
 All module distribution files, licenses, embedded regex database and upstream tests
 are retained. `UPSTREAM-SHA256SUMS` describes the original distribution. The two
 YAML imports (production and tests) and module metadata are the only upstream
-source changes: matching maintained `go.yaml.in/yaml/v2 v2.4.3`, requiring Go 1.18.
+source changes: matching maintained `go.yaml.in/yaml/v2 v2.4.3`, requiring Go 1.15.
 Existing caller APIs, LRU version, database loading and scalar semantics are preserved.
 Repository integration adds a Makefile and focused loading/scalar/error tests.
 Copied upstream CI files are inactive source evidence, not repository workflows.
