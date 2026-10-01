@@ -650,7 +650,7 @@ certs:
 .PHONY: multimod-verify
 multimod-verify: $(MULTIMOD)
 	@echo "Validating versions.yaml"
-	$(MULTIMOD) verify
+	GOFLAGS="$(filter-out -mod=%,$(GOFLAGS)) -mod=readonly" $(MULTIMOD) verify
 
 .PHONY: multimod-prerelease
 multimod-prerelease: $(MULTIMOD)

@@ -8,4 +8,4 @@ require (
 	golang.org/x/text v0.29.0
 )
 
-replace github.com/dnaeon/go-vcr => ../go-vcr
+replace github.com/dnaeon/go-vcr => github.com/StackVista/opentelemetry-collector-contrib/third_party/go-vcr v0.0.0-20261001190728-da917a14afd4

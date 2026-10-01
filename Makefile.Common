@@ -354,7 +354,11 @@ run-changed-tests:
 		else \
 			set -e; for dir in $$(echo $${AFFECTED_TEST_DIRS}); do \
 			(cd "$${dir}" && \
-				$(GOTESTSUM) --packages="./..." -- $(GOTEST_OPT) -count=3 ); \
+				case "$${dir}" in \
+				third_party/aerospike-client-go|third_party/aerospike-client-go/*) \
+					for iteration in 1 2 3; do $(GOTESTSUM) --packages="./..." -- $(filter-out -parallel 4,$(GOTEST_OPT)) -count=1; done ;; \
+				*) $(GOTESTSUM) --packages="./..." -- $(GOTEST_OPT) -count=3 ;; \
+				esac ); \
 			done \
 		fi \
 	fi

@@ -17,3 +17,10 @@ fmt: checkattribution $(GOFUMPT) $(GOIMPORTS)
 
 generate: checkattribution fmt
 	@:
+
+# Ginkgo rejects Go's parallel/count flags; repeat full invocations instead.
+GOTEST_OPT := $(GOTEST_RACE_OPT) -timeout $(GOTEST_TIMEOUT) --tags=$(GO_BUILD_TAGS)
+test-twice: $(GOTESTSUM)
+	@set -e; for iteration in 1 2; do \
+		$(GOTESTSUM) --packages="./..." -- $(GOTEST_OPT) -count=1; \
+	done

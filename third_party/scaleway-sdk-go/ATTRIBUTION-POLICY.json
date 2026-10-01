@@ -1,8 +1,8 @@
 {
   "Maintained": {
     "api/k8s/v1/kubeconfig.go": "c0624dacb6490cfe668e06139c006ac0424708c3cfd9d52b7cad1356bdac9bf7",
-    "go.mod": "f9621b1aaf855a4b75ac0bf83e3c0b149b33228a3d7c6854e6156135324a9df6",
-    "go.sum": "f518da7c39032da935dab84c613043e06e63c989303b3328c68d79251877a8de",
+    "go.mod": "a4778ac3a9e09c36d853affc0fb2dd296cd7ef48beb295d2e56a136bf6fc3ca0",
+    "go.sum": "159d6de6aca07c6171db7a1009d68723c7fa1d485e23602809939d2409daab08",
     "scw/config.go": "02d612bf99416f4e4eeb17f9089dfac5a2442e7c03715a4bf4d864e5528aae77"
   },
   "Manifests": {
