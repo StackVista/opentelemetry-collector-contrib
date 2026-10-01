@@ -1,0 +1,11 @@
+{
+  "Maintained": {
+    "go.mod": "7a237e58697382436429fd1309020160f20ae07d034fa60ba0a9fec5f7c7587a",
+    "go.sum": "87b242525c63cb6c05c1aee97f26b941ecd8f843541463e2fc2f2dc5bd4ea780",
+    "v1.0/parser.go": "7e0c6883043244affb15a79e042f5ae8f1a75892778a50db3256544e3373d8b3",
+    "v1.1/parser.go": "76fa12e784808de3e7339c232b7606c6ee3c6c7aee24a5a7ae1266c0f17dbcbd"
+  },
+  "Manifests": {
+    "UPSTREAM-SHA256SUMS": "cfea3ef2a680aa66f34f34f7d9c5d79e1c9cafa359ab00f6b3a4a8286a2a0ebc"
+  }
+}
