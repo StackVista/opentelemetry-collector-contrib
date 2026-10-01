@@ -35,3 +35,9 @@ Scoped Git attributes retain original asset bytes, including line endings.
 `UPSTREAM-MODULE.json` records immutable Git origin, original Go checksums and
 module ZIP digest without local cache paths. Complete license/source byte
 inventories and exact maintenance deltas are enforced by the native guard.
+
+The preserved upstream .golangci.yml is inactive configuration evidence for
+native Contrib lint. GNUmakefile explicitly selects the unchanged repository
+Contrib linter policy, including its existing third-party exclusions, instead
+of applying upstream formatting rules to immutable originals. Owned source
+formatting, first-party headers, compile/test and attribution guards remain.

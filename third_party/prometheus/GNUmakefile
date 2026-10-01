@@ -17,3 +17,6 @@ fmt: checkattribution $(GOFUMPT) $(GOIMPORTS)
 
 generate: checkattribution fmt
 	@:
+
+# Copied upstream config is source evidence; native lint uses Contrib policy.
+LINT := $(LINT) --config=$(SRC_ROOT)/.golangci.yml
