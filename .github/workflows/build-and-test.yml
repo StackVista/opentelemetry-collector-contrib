@@ -370,7 +370,7 @@ jobs:
       - name: Run Integration Tests
         run: make gointegration-test GROUP=${{ matrix.group }}
       - name: Save Docker images for cache
-        if: success() && steps.docker-cache.outputs.cache-hit != 'true'
+        if: github.event_name == 'pull_request' && success() && steps.docker-cache.outputs.cache-hit != 'true'
         shell: bash
         env:
           DOCKER_CACHE_DIR: ${{ runner.temp }}/docker-images
@@ -421,7 +421,7 @@ jobs:
       - name: Run Integration Tests
         run: make --no-print-directory -C ${{ matrix.group }} mod-integration-sudo-test
       - name: Save Docker images for cache
-        if: success() && steps.docker-cache.outputs.cache-hit != 'true'
+        if: github.event_name == 'pull_request' && success() && steps.docker-cache.outputs.cache-hit != 'true'
         shell: bash
         env:
           DOCKER_CACHE_DIR: ${{ runner.temp }}/docker-images
