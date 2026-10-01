@@ -20,3 +20,6 @@ Original source stays byte-exact through formatting/generation. Remove this
 backport after a compatible maintained owning release passes retained upstream
 and actual consumer/distribution checks. Product adoption is independent; this
 candidate does not establish release or deployment qualification.
+
+Original upstream Makefile is retained byte-for-byte; owned GNUmakefile
+provides native integration without replacing that original asset.

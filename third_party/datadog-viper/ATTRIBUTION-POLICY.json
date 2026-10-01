@@ -1,6 +1,5 @@
 {
   "Maintained": {
-    "Makefile": "1099205e8bb69eae43f9322799cd3dad198e04d18dd544bb29ff6076414ecf5e",
     "go.mod": "10fb392995fc3880e9f0e58b485bf3442261af9bc3e5a7d995f30ed4b3d71fbb",
     "go.sum": "870925d0de979111fc22b5ccc4456b1db714ca67e2d98af27b2711110d0e88f3",
     "viper.go": "10e4d92204f0c9e4ad49787fb6d9cb2036f9d2652575aee774c9965a15566b6f"
