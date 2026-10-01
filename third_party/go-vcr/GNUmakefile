@@ -8,7 +8,7 @@ ALL_SRC_AND_DOC_CMD := $(ATTRIBUTION_CMD) -owned-docs
 
 .PHONY: checkattribution
 checkattribution:
-	$(ATTRIBUTION_CMD)
+	$(ATTRIBUTION_CMD) -git-revision HEAD
 
 checklicense addlicense misspell misspell-correction: checkattribution
 

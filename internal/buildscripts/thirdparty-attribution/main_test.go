@@ -5,12 +5,71 @@ package main
 
 import (
 	"crypto/sha256"
+	"encoding/json"
 	"fmt"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"strings"
 	"testing"
 )
+
+func TestCommittedOwnerOmissions(t *testing.T) {
+	originalDir, err := os.Getwd()
+	if err != nil {
+		t.Fatal(err)
+	}
+	repo, err := exec.Command("git", "rev-parse", "--show-toplevel").Output()
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer func() {
+		if err := os.Chdir(originalDir); err != nil {
+			t.Fatal(err)
+		}
+	}()
+	for _, tc := range []struct{ module, asset string }{
+		{"go-vcr", "vendor/modules.txt"},
+		{"go-vcr", "example/fixtures/etcd.yaml"},
+		{"go-vcr", "LICENSE"},
+		{"go-vcr", "cassette/cassette.go"},
+		{"datadog-secrets-mock", "LICENSE"},
+		{"datadog-secrets-mock", "mock.go"},
+	} {
+		t.Run(tc.module+"/"+tc.asset, func(t *testing.T) {
+			dir := filepath.Join(strings.TrimSpace(string(repo)), "third_party", tc.module)
+			if err := os.Chdir(dir); err != nil {
+				t.Fatal(err)
+			}
+			data, err := os.ReadFile("ATTRIBUTION-POLICY.json")
+			if err != nil {
+				t.Fatal(err)
+			}
+			var p policy
+			if err := json.Unmarshal(data, &p); err != nil {
+				t.Fatal(err)
+			}
+			if err := verifyGit("HEAD", p); err != nil {
+				t.Fatal(err)
+			}
+			// Build an alternate tree in a private index without creating commits
+			// or changing the checkout's index, source files or refs.
+			t.Setenv("GIT_INDEX_FILE", filepath.Join(t.TempDir(), "index"))
+			for _, args := range [][]string{{"read-tree", "HEAD"}, {"update-index", "--force-remove", "--", tc.asset}} {
+				if output, err := exec.Command("git", args...).CombinedOutput(); err != nil {
+					t.Fatalf("%s: %v", output, err)
+				}
+			}
+			tree, err := exec.Command("git", "write-tree").Output()
+			if err != nil {
+				t.Fatal(err)
+			}
+			if err := verifyGit(strings.TrimSpace(string(tree)), p); err == nil || !strings.Contains(err.Error(), "missing inventory") {
+				t.Fatalf("committed omission was accepted: %v", err)
+			}
+		})
+	}
+}
 
 func TestOriginalAndOwnedBoundaries(t *testing.T) {
 	cases := []struct {
@@ -78,6 +137,8 @@ func TestMissingOriginalPatterns(t *testing.T) {
 	for _, name := range []string{
 		"tools/benchmark/benchmark.go",
 		".gitpod.yml",
+		"vendor/modules.txt",
+		"example/fixtures/etcd.yaml",
 		"syncers/auth_history_syncer/src/test/resources/impl/access.2022_06_09.log",
 		"ui/keys/dev_x509_cert.cnf",
 		"kubernetes/charts/athenz-zts/files/conf/athenz_conf.json",

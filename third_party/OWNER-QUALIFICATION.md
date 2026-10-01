@@ -43,3 +43,24 @@ Product builders require explicit adoption of independently reviewed source,
 actual binaries/images and delivery verification. No fork result establishes
 released/deployed product completion. Remove temporary backports after compatible
 maintained owning releases pass original and actual consumer/distribution checks.
+
+Executed standalone engineering residuals now have explicit maintained owners:
+Aerospike selects published Gomega v1.39.0 (the inspected v1.38.0 still imports
+archived v3); required Ginkgo/support metadata follows that release, retaining
+Go 1.23. Scaleway's cassette helper selects the complete original go-vcr v1.2.0
+with matching maintained v2. DataDog setup selects the complete four-file
+secrets/mock cd89 distribution with matching maintained v2 and the same-generation
+secrets definition. Latest DataDog v0.84 raises Go to 1.26 and changes generation;
+no such upgrade is applied. VCR's latest v1 release is still v1.2.0; newer module
+major APIs are not substituted.
+
+New owners retain official ZIP checksums, complete source/fixtures/licenses/modes,
+original Makefile/vendor assets, and strict original/owned inventories. Their
+native attribution recipes require both filesystem and committed Git inventories.
+Private-index deletion controls exercise lost licenses/parser files, ignored
+vendor metadata and embedded cassette fixtures without creating commits or
+changing checkout refs/index. Synthetic matcher diagnostics, secrets scalar/
+callback/error controls, and VCR encode/decode/replay/error controls pass against
+both original parser source and candidate; no service/customer endpoint is used.
+Production executable qualification remains at signed9912672e14; these test-only
+owner changes are not a new production build, product rollout or deployment.

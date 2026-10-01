@@ -14,6 +14,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"sort"
 	"strings"
@@ -28,6 +29,7 @@ func main() {
 	ownedSource := flag.Bool("owned-source", false, "print owned Go/shell paths for the existing header checker")
 	ownedDocs := flag.Bool("owned-docs", false, "print owned source/document paths for the existing spell checker")
 	policySHA := flag.String("policy-sha", "", "required reviewed policy SHA-256")
+	gitRevision := flag.String("git-revision", "", "also verify the committed module inventory")
 	flag.Parse()
 	data, err := ioutil.ReadFile("ATTRIBUTION-POLICY.json")
 	if err != nil || len(*policySHA) != 64 || digest(data) != *policySHA {
@@ -46,6 +48,12 @@ func main() {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
+	if *gitRevision != "" {
+		if err := verifyGit(*gitRevision, p); err != nil {
+			fmt.Fprintln(os.Stderr, err)
+			os.Exit(1)
+		}
+	}
 	if *ownedSource || *ownedDocs {
 		for _, name := range owned {
 			if strings.HasSuffix(name, ".go") || (*ownedSource && strings.HasSuffix(name, ".sh")) ||
@@ -56,6 +64,52 @@ func main() {
 	} else {
 		fmt.Println("Third-party attribution and owned inventory verified")
 	}
+}
+
+func verifyGit(revision string, p policy) error {
+	prefix, err := exec.Command("git", "rev-parse", "--show-prefix").Output()
+	if err != nil {
+		return err
+	}
+	tree, err := exec.Command("git", "ls-tree", "-r", "-z", revision, "--", ".").Output()
+	if err != nil {
+		return err
+	}
+	root, err := ioutil.TempDir("", "attribution-git-")
+	if err != nil {
+		return err
+	}
+	defer os.RemoveAll(root)
+	for _, entry := range strings.Split(string(tree), "\x00") {
+		if entry == "" {
+			continue
+		}
+		fields := strings.SplitN(entry, "\t", 2)
+		if len(fields) != 2 {
+			return fmt.Errorf("invalid Git inventory")
+		}
+		metadata := strings.Fields(fields[0])
+		if len(metadata) != 3 || (metadata[0] != "100644" && metadata[0] != "100755") {
+			return fmt.Errorf("non-regular Git inventory file: %s", fields[1])
+		}
+		name := fields[1]
+		if filepath.IsAbs(name) || strings.HasPrefix(name, "../") {
+			return fmt.Errorf("unsafe Git inventory path: %s", name)
+		}
+		data, err := exec.Command("git", "show", revision+":"+strings.TrimSpace(string(prefix))+name).Output()
+		if err != nil {
+			return err
+		}
+		path := filepath.Join(root, filepath.FromSlash(name))
+		if err := os.MkdirAll(filepath.Dir(path), 0o755); err != nil {
+			return err
+		}
+		if err := ioutil.WriteFile(path, data, 0o600); err != nil {
+			return err
+		}
+	}
+	_, err = verify(root, p)
+	return err
 }
 
 func safePath(name string) bool {
