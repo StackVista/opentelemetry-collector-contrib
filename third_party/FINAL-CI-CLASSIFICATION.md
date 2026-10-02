@@ -9,10 +9,15 @@ Kubernetes e2e36913581820 all failed. Failures are classified from actual logs:
 * checks110543986909: multimod uses direct Go invocations and bypasses VCR's
   module-mode native recipe; original incomplete vendor metadata causes
   inconsistent vendoring. Verification now explicitly uses readonly module
-  mode; inventories and original vendor assets remain intact.
+  mode; inventories and original vendor assets remain intact. The subsequent
+  native check exposed missing registry entries for the two foreign owners;
+  these follow the existing excluded-module entries without assigning Collector
+  release versions.
 * Linux other lint110543988739: Scaleway's original gomoddirectives gate rejects
   the new local VCR replacement. Select the public checksum-proven immutable
-  da917a producer instead, with exactly the reviewed owner tree and APIs.
+  da917a producer, with exactly the reviewed owner tree and APIs. An owned lint
+  config retains all original rules, allowing only the guarded VCR identity.
+  Local/unrelated replacements remain rejected; original lint bytes stay exact.
 * stable/oldstable other110543988766/110543989257, arm other110544132556 and
   scoped110542278015: selected Ginkgo now rejects common Go parallel/count
   flags. Aerospike native tests retain race/timeout/tag flags, and repeat whole
@@ -29,7 +34,7 @@ Kubernetes e2e36913581820 all failed. Failures are classified from actual logs:
 * Kubernetes1.30/1.23 jobs110546894835/110546894860: ClusterRBAC and
   NamespacedRBACNoPodIP conditions time out; package exceeds600s.
 * Fifteen govuln groups fail on actual selected vulnerable dependencies including
-  OTel/grpc, Sarama, JWT and other owners. These gates stay required. A YAML
+  OTel/grpc, AWS eventstream/CloudWatch, expr and golang.org/x libraries. These gates stay required. A YAML
   backport or unchanged component source is not proof those findings are safe.
 * lint/unittest/integration/Kubernetes aggregate jobs propagate failed children;
   they are not separate source defects.

@@ -17,3 +17,6 @@ fmt: checkattribution $(GOFUMPT) $(GOIMPORTS)
 
 generate: checkattribution fmt
 	@:
+
+# Only the checksum-guarded immutable VCR owner is allowed.
+LINT := $(LINT) --config=.golangci-owned.yml

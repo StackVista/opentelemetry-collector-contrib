@@ -1,3 +1,4 @@
+.golangci-owned.yml
 ATTRIBUTION-POLICY.json
 Makefile
 OWNED-FILES
