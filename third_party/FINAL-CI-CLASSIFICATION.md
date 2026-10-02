@@ -50,3 +50,42 @@ Three production executable/OTLP proofs remain at9912672. No production rebuild,
 new release or product pin rollout is performed for this classification.
 The final session result reports corrected source, real targeted controls and
 replacement native CI status. Pending or failed native jobs are never passes.
+
+October2 recovery inspected terminal bbfee340b0 run36917514485 and its arm,
+scoped, e2e and telemetrygen siblings. Native checks110557154841 now reach the
+missing foreign-owner registry error; Linux other110557156426 rejects remote
+VCR replacements too. Both recorded integration corrections are completed in
+c975ba529d, preserving original lint bytes and requiring the checksum-anchored
+public VCR identity. The original exact go.mod hash also rejects pin changes.
+
+Scoped110555305465 and arm110556235644 have no Ginkgo flag errors; local
+subpackages pass and root Aerospike fails localhost:3000. Stable/oldstable other
+110557156496/110557156847 fail the same server requirement. Windows other
+110557156299 retains original AthenZ syscall errors. RabbitMQ110557155705,
+Elasticsearch110557155426 reports repeated scraping errors and receives zero
+resources where four are expected, rather than the earlier missing-port failure.
+The fifteen govuln groups remain failing gates.
+
+Telemetrygen110555021449 fails fetching unchanged Docker28.3.3 from Go proxy
+with HTTP/2 INTERNAL_ERROR: external download failure, not a compiled-source
+failure. Supervisor110559677866 HUPReload receives config, sends SIGHUP, then
+agent exits1; its five-second remote-config-start condition expires. Source and
+module metadata are unchanged by this test-owner increment, but a passing
+baseline was not established here: keep an unresolved timing/runtime hold.
+Kubernetes110560205263/110560205297 retain RBAC receive-condition timeouts.
+Aggregate failures propagate failed children; startup failures without runnable
+jobs do not establish a specific policy root cause. Exact replacement-head
+native status and targeted controls are returned in the session result.
+
+Native CI36972828772 job110730514864 passes at signedc975ba529d, including
+CheckApi, crosslink, tidy/generation/coverage and multimod verification. The
+original VCR vendor metadata remains unchanged, and all foreign modules are
+registered. Local native multimod verification also passes after recovery.
+
+October2 targeted native Scaleway lint passes with original source/attribution,
+license and spelling gates. The owned config differs from original only by the
+single VCR identity setting. Isolated gomoddirectives controls accept that remote
+identity and reject local/unrelated replacements. The real attribution guard
+rejects an altered VCR immutable pin before lint; standalone module verification
+passes. Earlier full parser/caller/race/omission suites are preserved receipts,
+not rerun claims. Only interrupted metadata/lint integration was requalified.
